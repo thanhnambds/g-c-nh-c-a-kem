@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Góc Nhỏ Của Kem - Elsa & Kitty Learning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Góc Nhỏ Của Kem">
+    <link rel="apple-touch-icon" href="assets/elsa-icon.png">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div id="app" class="elsa-theme">
+        <!-- Cột trái: Ảnh bé Kem -->
+        <div class="side-photo"></div>
+
+        <!-- Cột phải: Nội dung học tập -->
+        <div class="side-content">
+            <header>
+                <div class="logo-container">
+                    <img src="assets/kitty-icon.png" alt="Kitty" class="floating-icon" id="kitty-logo">
+                    <h1 id="main-title">Góc Nhỏ Của Kem</h1>
+                    <img src="assets/elsa-icon.png" alt="Elsa" class="floating-icon" id="elsa-logo">
+                </div>
+                <div class="header-actions">
+                    <div class="music-toggle muted" onclick="app.toggleMusic()">
+                        <i data-lucide="music"></i>
+                    </div>
+                    <input type="range" class="volume-slider" min="0" max="1" step="0.05" value="0.3" oninput="app.setVolume(this.value)">
+                    <div class="sticker-counter" onclick="app.showStickers()">
+                        <span id="sticker-count">0</span>
+                        <i data-lucide="sparkles"></i>
+                    </div>
+                </div>
+            </header>
+
+            <main id="content">
+                <!-- Home Screen -->
+                <div id="home-screen" class="screen active">
+                    <div class="welcome-banner">
+                        <h2>Chào mừng công chúa Kem!</h2>
+                        <p>Hôm nay chúng mình học gì nhỉ?</p>
+                    </div>
+                    <div class="menu-grid">
+                        <button class="menu-card math" onclick="app.loadModule('math')">
+                            <div class="card-icon">📐</div>
+                            <span>Toán</span>
+                            <p>Phạm vi 100</p>
+                        </button>
+                        <button class="menu-card vietnamese" onclick="app.loadModule('vietnamese')">
+                            <div class="card-icon">🇻🇳</div>
+                            <span>Tiếng Việt</span>
+                            <p>Ghép vần & Câu</p>
+                        </button>
+                        <button class="menu-card english" onclick="app.loadModule('english')">
+                            <div class="card-icon">🔠</div>
+                            <span>Tiếng Anh</span>
+                            <p>Từ vựng & Giao tiếp</p>
+                        </button>
+                        <button class="menu-card coloring" onclick="app.loadModule('coloring')">
+                            <div class="card-icon">🎨</div>
+                            <span>Họa Sĩ Nhí</span>
+                            <p>Bé tập tô màu</p>
+                        </button>
+                        <button class="menu-card difference" onclick="app.loadModule('difference')">
+                            <div class="card-icon">🔍</div>
+                            <span>Tinh Mắt</span>
+                            <p>Tìm điểm khác</p>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Coloring Screen -->
+                <div id="coloring-screen" class="screen">
+                    <div class="header-with-back">
+                        <button class="btn-back" onclick="app.loadHome()"><i data-lucide="arrow-left"></i> Quay lại</button>
+                        <h2>Họa Sĩ Nhí Tâm An</h2>
+                    </div>
+                    <div class="game-container coloring-container">
+                        <!-- Controls -->
+                        <div class="coloring-controls">
+                            <button id="btn-eraser" class="btn-tool"><i data-lucide="eraser"></i> Tẩy</button>
+                            <button id="btn-clear" class="btn-tool"><i data-lucide="trash-2"></i> Vẽ lại</button>
+                        </div>
+                        <!-- Nơi chứa khay màu -->
+                        <div class="color-palette" id="color-palette"></div>
+                        <!-- Nơi chứa tranh vẽ -->
+                        <div class="drawing-board-wrapper">
+                            <canvas id="coloring-canvas"></canvas>
+                            <img id="coloring-outline" src="assets/cute_princess.png" alt="Outline" />
+                        </div>
+                        <!-- Chọn ảnh khác -->
+                        <div class="image-selector" id="image-selector">
+                            <img src="assets/cute_princess.png" class="img-thumb active" onclick="app.changeColoringImage(this)" />
+                            <img src="assets/cute_kitty.png" class="img-thumb" onclick="app.changeColoringImage(this)" />
+                            <img src="assets/cute_dinosaur.png" class="img-thumb" onclick="app.changeColoringImage(this)" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Math Menu Screen -->
+                <div id="math-menu-screen" class="screen">
+                    <div class="header-with-back">
+                        <button class="btn-back" onclick="app.loadHome()"><i data-lucide="arrow-left"></i> Quay lại</button>
+                        <h2>Lựa chọn bài học</h2>
+                    </div>
+                    <div class="menu-grid secondary">
+                        <button class="menu-card mini all" onclick="app.startMathGame('all')">
+                            <div class="card-icon">🎲</div>
+                            <span>Tổng hợp</span>
+                        </button>
+                        <button class="menu-card mini ordering" onclick="app.startMathGame('sap_xep')">
+                            <div class="card-icon">🧩</div>
+                            <span>Sắp xếp số</span>
+                        </button>
+                        <button class="menu-card mini fillin" onclick="app.startMathGame('phep_tinh')">
+                            <div class="card-icon">➕</div>
+                            <span>Phép tính</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Math Screen -->
+                <div id="math-screen" class="screen">
+                    <!-- Content injected by JS -->
+                </div>
+
+                <!-- Vietnamese Menu Screen -->
+                <div id="vietnamese-menu-screen" class="screen">
+                    <div class="header-with-back">
+                        <button class="btn-back" onclick="app.loadHome()"><i data-lucide="arrow-left"></i> Quay lại</button>
+                        <h2>Cùng học Tiếng Việt</h2>
+                    </div>
+                    <div class="menu-grid secondary">
+                        <button class="menu-card mini all" onclick="app.startVietnameseGame('all')">
+                            <div class="card-icon">📚</div>
+                            <span>Tổng hợp</span>
+                        </button>
+                        <button class="menu-card mini ordering" onclick="app.startVietnameseGame('chinh_ta')">
+                            <div class="card-icon">📝</div>
+                            <span>Chính tả</span>
+                        </button>
+                        <button class="menu-card mini fillin" onclick="app.startVietnameseGame('cau_tu')">
+                            <div class="card-icon">🧩</div>
+                            <span>Ghép câu</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Vietnamese Screen -->
+                <div id="vietnamese-screen" class="screen">
+                    <!-- Content injected by JS -->
+                </div>
+
+                <!-- English Menu Screen -->
+                <div id="english-menu-screen" class="screen">
+                    <div class="header-with-back">
+                        <button class="btn-back" onclick="app.loadHome()"><i data-lucide="arrow-left"></i> Quay lại</button>
+                        <h2>English is Fun!</h2>
+                    </div>
+                    <div class="menu-grid secondary">
+                        <button class="menu-card mini all" onclick="app.startEnglishGame('all')">
+                            <div class="card-icon">🌟</div>
+                            <span>All Topics</span>
+                        </button>
+                        <button class="menu-card mini ordering" onclick="app.startEnglishGame('animals')">
+                            <div class="card-icon">🦄</div>
+                            <span>Animals</span>
+                        </button>
+                        <button class="menu-card mini fillin" onclick="app.startEnglishGame('colors')">
+                            <div class="card-icon">🎨</div>
+                            <span>Colors</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- English Screen -->
+                <div id="english-screen" class="screen">
+                    <!-- Content injected by JS -->
+                </div>
+
+                <!-- Difference Screen -->
+                <div id="difference-screen" class="screen">
+                    <div class="header-with-back">
+                        <button class="btn-back" onclick="app.loadHome()"><i data-lucide="arrow-left"></i> Quay lại</button>
+                        <h2>🔍 Bé Tinh Mắt</h2>
+                    </div>
+                    <div class="difference-header">
+                        <div>
+                            <div id="diff-scene-name" class="diff-scene-name">🌸 Khu Vườn Mùa Xuân</div>
+                            <div class="diff-progress">Tìm được: <span id="diff-found">0</span> / <span id="diff-total">5</span> 🔍</div>
+                        </div>
+                        <button class="btn-hint" onclick="app.showDiffHint()"><i data-lucide="lightbulb"></i> Gợi ý</button>
+                    </div>
+                    <div class="difference-container" id="diff-image-wrapper">
+                        <img id="diff-main-image" src="" alt="Spot the difference" />
+                        <div id="diff-hotspots-container"></div>
+                    </div>
+                    <div id="diff-feedback" class="diff-feedback-msg"></div>
+                </div>
+
+                <!-- Sticker Store Screen -->
+                <div id="sticker-screen" class="screen">
+                    <div class="header-with-back">
+                        <button class="btn-back" onclick="app.loadHome()"><i data-lucide="arrow-left"></i> Quay lại</button>
+                        <h2>Bộ sưu tập Sticker</h2>
+                    </div>
+                    <div id="sticker-grid" class="sticker-grid">
+                        <!-- Stickers injected by JS -->
+                    </div>
+                </div>
+            </main>
+
+            <footer>
+                <p>Dành tặng bé Kem của Ba ♥</p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Container cho nhân vật phản hồi -->
+    <div id="feedback-character-container" class="hidden">
+        <img id="feedback-character" src="" alt="Feedback Character">
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('service-worker.js')
+                    .then(reg => console.log('Service Worker đã đăng ký thành công!', reg))
+                    .catch(err => console.log('Đăng ký Service Worker thất bại!', err));
+            });
+        }
+    </script>
+</body>
+</html>
