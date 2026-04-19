@@ -34,6 +34,11 @@
                         <i data-lucide="music"></i>
                     </div>
                     <input type="range" class="volume-slider" min="0" max="1" step="0.05" value="0.3" oninput="app.setVolume(this.value)">
+                    
+                    <div class="pet-status-btn" onclick="app.loadPetScreen()">
+                        <span id="fish-count">0</span> 🐟
+                    </div>
+
                     <div class="sticker-counter" onclick="app.showStickers()">
                         <span id="sticker-count">0</span>
                         <i data-lucide="sparkles"></i>
@@ -73,6 +78,11 @@
                             <div class="card-icon">🔍</div>
                             <span>Tinh Mắt</span>
                             <p>Tìm điểm khác</p>
+                        </button>
+                        <button class="menu-card pet" onclick="app.loadPetScreen()">
+                            <div class="card-icon">🐱</div>
+                            <span>Nhà của Mèo</span>
+                            <p>Chăm sóc thú cưng</p>
                         </button>
                     </div>
                 </div>
@@ -206,6 +216,33 @@
                     <div id="diff-feedback" class="diff-feedback-msg"></div>
                 </div>
 
+                <!-- Pet Screen -->
+                <div id="pet-screen" class="screen">
+                    <div class="header-with-back">
+                        <button class="btn-back" onclick="app.loadHome()"><i data-lucide="arrow-left"></i> Quay lại</button>
+                        <h2>Nhà Của Mèo 🐱</h2>
+                    </div>
+                    <div class="game-container pet-container">
+                        <div class="stats-row">
+                            <div>Cá đang có: <strong id="pet-fish-count" style="color: #4dabf7;">0</strong> 🐟</div>
+                            <div>Cấp độ Mèo: <strong id="pet-level-display" style="color: #f06595;">1</strong></div>
+                        </div>
+                        
+                        <div class="pet-avatar-wrapper">
+                            <div id="pet-avatar" class="pet-avatar">🐱</div>
+                        </div>
+                        
+                        <div class="exp-section">
+                            <div class="exp-bar-container">
+                                <div id="pet-exp-fill" class="exp-bar-fill"></div>
+                            </div>
+                            <div class="exp-text">Điểm kinh nghiệm: <span id="pet-exp-current">0</span> / <span id="pet-exp-needed">50</span></div>
+                        </div>
+                        
+                        <button id="btn-feed-pet" class="btn-submit" style="background-color: #ff922b;" onclick="app.feedPet()">Cho Mèo ăn (Tốn 1 🐟)</button>
+                        <div id="pet-feedback" class="feedback-msg"></div>
+                    </div>
+                </div>
                 <!-- Sticker Store Screen -->
                 <div id="sticker-screen" class="screen">
                     <div class="header-with-back">

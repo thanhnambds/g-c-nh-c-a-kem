@@ -752,3 +752,94 @@ footer {
     0% { transform: scale(1); opacity: 1; }
     100% { transform: scale(0); opacity: 0; }
 }
+
+/* ===== HỆ THỐNG NUÔI MÈO ===== */
+.pet-status-btn {
+    background: white;
+    padding: 10px 15px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    box-shadow: var(--card-shadow);
+    cursor: pointer;
+    transition: transform 0.2s;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--elsa-dark);
+}
+.pet-status-btn:hover { transform: scale(1.05); }
+
+.pet-container {
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(231,245,255,0.9) 100%);
+}
+
+.stats-row {
+    display: flex;
+    gap: 30px;
+    font-size: 1.2rem;
+    background: #fff;
+    padding: 15px 30px;
+    border-radius: 20px;
+    border: 3px dashed var(--elsa-blue);
+    margin-bottom: 10px;
+}
+
+.pet-avatar-wrapper {
+    margin: 20px 0;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pet-avatar {
+    font-size: 8rem;
+    transition: transform 0.3s;
+    filter: drop-shadow(0 15px 20px rgba(0,0,0,0.15));
+    user-select: none;
+}
+
+.happy-bounce {
+    animation: petHappy 0.6s ease-in-out;
+}
+
+@keyframes petHappy {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-40px) scale(1.2) rotate(10deg); }
+    75% { transform: translateY(-10px) scale(1.1) rotate(-10deg); }
+}
+
+.exp-section {
+    width: 90%;
+    max-width: 400px;
+    margin-bottom: 25px;
+}
+
+.exp-bar-container {
+    width: 100%;
+    height: 24px;
+    background: #e9ecef;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+    border: 2px solid white;
+}
+
+.exp-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ffdeeb, #f06595);
+    width: 0%;
+    transition: width 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius: 12px;
+}
+
+.exp-text {
+    margin-top: 8px;
+    font-weight: bold;
+    color: #868e96;
+}
+
+.menu-card.pet { border-bottom: 8px solid #ff922b; }

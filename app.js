@@ -39,7 +39,16 @@ const app = {
         { "id": "m36", "dang_bai": "hinh_hoc", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Kem ơi, hãy đếm xem có bao nhiêu hình tam giác màu vàng trong hình này nhé:", "hinh_anh": "assets/geom_tri_multi.svg", "lua_chon": ["3", "4", "5"], "dap_an_dung": "4", "giai_thich": "Chỉ đếm hình tam giác vàng thôi nha! Có tất cả 4 bạn tam giác vàng đang chơi trốn tìm kìa." },
         { "id": "m37", "dang_bai": "hinh_hoc", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Khó hơn nè! Hãy căng mắt ra đếm xem có bao nhiêu hình tam giác tất cả?", "hinh_anh": "assets/geom_tri_6.svg", "lua_chon": ["3", "6", "5"], "dap_an_dung": "6", "giai_thich": "Có 3 hình nhỏ, 2 hình vừa (ghép từ 2 hình mỏng lại), và 1 hình bự nhất bọc ngoài cùng. Tổng cộng là 6 hình nha bé!" },
         { "id": "m38", "dang_bai": "hinh_hoc", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Ngôi nhà xinh xắn này có một chiếc mái che. Mái nhà có phần viền ngoài màu cam là hình gì vậy Kem?", "hinh_anh": "assets/geom_house.svg", "lua_chon": ["Hình vuông", "Hình tam giác", "Hình tròn"], "dap_an_dung": "Hình tam giác", "giai_thich": "Mái nhà có 3 góc và 3 cạnh nên đó là hình tam giác nhé con." },
-        { "id": "m39", "dang_bai": "hinh_hoc", "kieu_tra_loi": "dien_khuyet", "cau_hoi": "Ngôi nhà này có tất cả mấy hình vuông (gợi ý: đếm thân nhà màu xanh và ô cửa sổ)?", "hinh_anh": "assets/geom_house.svg", "lua_chon": [], "dap_an_dung": "2", "giai_thich": "Phần thân nhà là 1 hình vuông lớn, và cái cửa sổ là 1 hình vuông nhỏ. Vậy có 2 hình vuông nha." }
+        { "id": "m39", "dang_bai": "hinh_hoc", "kieu_tra_loi": "dien_khuyet", "cau_hoi": "Ngôi nhà này có tất cả mấy hình vuông (gợi ý: đếm thân nhà màu xanh và ô cửa sổ)?", "hinh_anh": "assets/geom_house.svg", "lua_chon": [], "dap_an_dung": "2", "giai_thich": "Phần thân nhà là 1 hình vuông lớn, và cái cửa sổ là 1 hình vuông nhỏ. Vậy có 2 hình vuông nha." },
+        { "id": "m40", "dang_bai": "loi_van", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Mẹ đi chợ mua cá hết 40 nghìn, mua rau hết 15 nghìn. Hỏi mẹ tiêu hết bao nhiêu tiền?", "lua_chon": ["55", "45", "65"], "dap_an_dung": "55", "giai_thich": "Con lấy 40 + 15 = 55 nhé." },
+        { "id": "m41", "dang_bai": "phep_tinh", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Phép tính nào dưới đây có kết quả là 10?", "lua_chon": ["5 + 5", "12 - 3", "4 + 7"], "dap_an_dung": "5 + 5", "giai_thich": "Chỉ có 5 + 5 mới bằng 10, vì 12-3=9 và 4+7=11 nhé con." },
+        { "id": "m42", "dang_bai": "quy_luat", "kieu_tra_loi": "dien_khuyet", "cau_hoi": "Điền số tiếp theo vào dãy: 2, 4, 6, 8, ...", "lua_chon": [], "dap_an_dung": "10", "giai_thich": "Đây là các số chẵn cách nhau 2 đơn vị, sau 8 là 10 nhé." },
+        { "id": "m43", "dang_bai": "so_sanh", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp độ dài từ Ngắn đến Dài:", "lua_chon": ["15cm", "8cm", "20cm"], "dap_an_dung": ["8cm", "15cm", "20cm"], "giai_thich": "Độ dài ngắn nhất là 8cm, rồi tới 15cm và dài nhất là 20cm." },
+        { "id": "m44", "dang_bai": "tu_duy", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Có 10 con chim trên cành, người thợ bắn súng 'đoàng'. Hỏi còn mây con chim trên cành?", "lua_chon": ["0 con", "10 con", "9 con"], "dap_an_dung": "0 con", "giai_thich": "Tiếng súng nổ làm chim sợ bay đi hết, nên không còn con nào tren cành cả (0 con)." },
+        { "id": "m45", "dang_bai": "thoi_gian", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Kim dài và kim ngắn cùng chỉ vào số 12. Vậy là mấy giờ?", "lua_chon": ["12 giờ", "6 rưỡi", "1 giờ"], "dap_an_dung": "12 giờ", "giai_thich": "Cả hai kim chập vào số 12 thẳng đứng, tức là 12 giờ chẵn!" },
+        { "id": "m46", "dang_bai": "cau_tao_so", "kieu_tra_loi": "dien_khuyet", "cau_hoi": "Số lớn nhất có 2 chữ số khác nhau là số mấy?", "lua_chon": [], "dap_an_dung": "98", "giai_thich": "Số 99 là lớn nhất có 2 chữ số giống nhau, số liền trước nó là 98 có chữ số 9 và 8 khác nhau nha." },
+        { "id": "m47", "dang_bai": "phep_tinh", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp để tạo ra phép tính ĐÚNG:", "lua_chon": ["7", "=", "4", "+", "3"], "dap_an_dung": ["3", "+", "4", "=", "7"], "giai_thich": "Ba cộng bốn bằng bảy, hoặc 4 + 3 = 7 đều được!" },
+        { "id": "m48", "dang_bai": "do_dai", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Gang tay của Kem dài khoảng bao nhiêu?", "lua_chon": ["15 cm", "1 m", "10 m"], "dap_an_dung": "15 cm", "giai_thich": "Gang tay bé xíu chỉ khoảng mười mấy xăng-ti-mét thôi, 1m là bằng bé cao rồi (quá dài)!" }
     ],
 
     vietnameseQuestions: [
@@ -58,7 +67,17 @@ const app = {
         { "id": "vn_13", "dang_bai": "cau_tu", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Từ nào chỉ con vật sống dưới nước?", "lua_chon": ["Con cá", "Con gà", "Con chim"], "dap_an_dung": "Con cá", "giai_thich": "Con cá sống dưới nước đó con." },
         { "id": "vn_14", "dang_bai": "cau_tu", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp thành câu:", "lua_chon": ["đi", "Kem", "trường", "đến"], "dap_an_dung": ["Kem", "đi", "đến", "trường"], "giai_thich": "Câu đúng: Kem đi đến trường." },
         { "id": "vn_15", "dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Điền l hay n: ...à xanh rất mát", "lua_chon": ["l", "n"], "dap_an_dung": "l", "giai_thich": "Viết đúng là 'lá xanh' — dùng âm 'l' con nhé." },
-        { "id": "vn_16", "dang_bai": "cau_tu", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Câu nào đúng chính tả?", "lua_chon": ["Em yêu mẹ", "Em iu mẹ", "Em dêu mẹ"], "dap_an_dung": "Em yêu mẹ", "giai_thich": "Viết đúng là 'yêu' con nhé." }
+        { "id": "vn_16", "dang_bai": "cau_tu", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Câu nào đúng chính tả?", "lua_chon": ["Em yêu mẹ", "Em iu mẹ", "Em dêu mẹ"], "dap_an_dung": "Em yêu mẹ", "giai_thich": "Viết đúng là 'yêu' con nhé." },
+        { "id": "vn_17", "dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Điền âm tr hay ch: Mẹ mua cho bé đôi ...âu báu.", "lua_chon": ["ch", "tr"], "dap_an_dung": "ch", "giai_thich": "Viết đúng là 'châu báu' con nhé." },
+        { "id": "vn_18", "dang_bai": "cau_tu", "kieu_tra_loi": "sap_xep", "cau_hoi": "Xếp cho thành câu đúng:", "lua_chon": ["sáng", "Mặt", "tỏa", "trời"], "dap_an_dung": ["Mặt", "trời", "tỏa", "sáng"], "giai_thich": "Câu đúng: Mặt trời tỏa sáng." },
+        { "id": "vn_19", "dang_bai": "cau_tu", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Từ nào chỉ màu sắc của lá cây mùa xuân?", "lua_chon": ["Màu xanh", "Màu trắng", "Màu đen"], "dap_an_dung": "Màu xanh", "giai_thich": "Lá cây màu xanh tươi tắn đấy con." },
+        { "id": "vn_20", "dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Đâu là từ viết ĐÚNG chính tả?", "lua_chon": ["Gia đình", "Da đình", "Ra đình"], "dap_an_dung": "Gia đình", "giai_thich": "Chữ 'Gia đình' viết bằng âm Gi con nhé." },
+        { "id": "vn_21", "dang_bai": "cau_tu", "kieu_tra_loi": "dien_khuyet", "cau_hoi": "Ăn quả nhớ kẻ trồng ...", "lua_chon": [], "dap_an_dung": "cây", "giai_thich": "Câu tục ngữ là 'Ăn quả nhớ kẻ trồng cây' khuyên chúng ta phải biết ơn." },
+        { "id": "vn_22", "dang_bai": "cau_tu", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Từ nào TRÁI NGHĨA với từ 'To lớn'?", "lua_chon": ["Bé nhỏ", "Khổng lồ", "Cao vút"], "dap_an_dung": "Bé nhỏ", "giai_thich": "Trái nghĩa với To lớn là Bé nhỏ (hoặc Nhỏ xíu) con nha." },
+        { "id": "vn_23", "dang_bai": "cau_tu", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp đoạn thơ quen thuộc:", "lua_chon": ["Ai", "chăm", "Kem", "bảo"], "dap_an_dung": ["Ai", "bảo", "Kem", "chăm"], "giai_thich": "Hoặc là 'Kem rất chăm' hihi!" },
+        { "id": "vn_24", "dang_bai": "chinh_ta", "kieu_tra_loi": "dien_khuyet", "cau_hoi": "Chữ Mẹ và chữ Ba, chữ nào có dấu nặng?", "lua_chon": [], "dap_an_dung": "Mẹ", "giai_thich": "Đúng rồi! Chữ 'Mẹ' có dấu nặng ở bên dưới chữ e nè." },
+        { "id": "vn_25", "dang_bai": "cau_tu", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Món đồ nào dùng để đội lên đầu khi ra nắng?", "lua_chon": ["Cái mũ", "Cái ô", "Cả hai đúng"], "dap_an_dung": "Cả hai đúng", "giai_thich": "Trời nắng mình có thể đội mũ hoặc che ô đều để che đầu nhé." },
+        { "id": "vn_26", "dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Chọn từ đúng: Buổi tối, ...ăng sáng vằng vặc trên cao", "lua_chon": ["tr", "ch"], "dap_an_dung": "tr", "giai_thich": "Viết đúng là 'trăng sáng', dùng âm 'tr'." }
     ],
 
     englishQuestions: [
@@ -77,7 +96,17 @@ const app = {
         { "id": "en_13", "dang_bai": "animals", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What is a baby dog called? (Con chó con gọi là gì?)", "lua_chon": ["Puppy", "Kitten", "Cub"], "dap_an_dung": "Puppy", "giai_thich": "Chó con tiếng Anh là 'Puppy' đó con." },
         { "id": "en_14", "dang_bai": "colors", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What color is snow? (Tuyết màu gì?)", "lua_chon": ["White", "Blue", "Gray"], "dap_an_dung": "White", "giai_thich": "Tuyết màu trắng — White đó con, giống như váy Elsa!" },
         { "id": "en_15", "dang_bai": "animals", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What animal lives in the sea? (Con gì sống trong biển?)", "lua_chon": ["Fish", "Bird", "Monkey"], "dap_an_dung": "Fish", "giai_thich": "Fish là cá, sống trong biển đó con." },
-        { "id": "en_16", "dang_bai": "animals", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp: 'Tôi thích chó'", "lua_chon": ["dogs.", "like", "I"], "dap_an_dung": ["I", "like", "dogs."], "giai_thich": "Câu đúng: I like dogs." }
+        { "id": "en_16", "dang_bai": "animals", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp: 'Tôi thích chó'", "lua_chon": ["dogs.", "like", "I"], "dap_an_dung": ["I", "like", "dogs."], "giai_thich": "Câu đúng: I like dogs." },
+        { "id": "en_17", "dang_bai": "animals", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Con gà trống gáy Ò ó o, tiếng Anh gọi con gà là gì?", "lua_chon": ["Chicken", "Duck", "Lion"], "dap_an_dung": "Chicken", "giai_thich": "Chicken là con gà con nhé!" },
+        { "id": "en_18", "dang_bai": "colors", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp: 'Một quả táo đỏ'", "lua_chon": ["apple", "A", "red"], "dap_an_dung": ["A", "red", "apple"], "giai_thich": "Màu sắc đứng trước đồ vật: A red apple." },
+        { "id": "en_19", "dang_bai": "colors", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Quả cam tiếng Anh là Orange. Vậy màu cam tiếng Anh là gì?", "lua_chon": ["Orange", "Yellow", "Brown"], "dap_an_dung": "Orange", "giai_thich": "Từ 'Orange' vừa có nghĩa là quả cam, vừa có nghĩa là màu cam luôn mẹo quá phải không!" },
+        { "id": "en_20", "dang_bai": "animals", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What animal loves bananas? (Con vật nào rất thích ăn chuối?)", "lua_chon": ["Monkey", "Tiger", "Snake"], "dap_an_dung": "Monkey", "giai_thich": "Khỉ (Monkey) là loài vật rất thích ăn chuối!" },
+        { "id": "en_21", "dang_bai": "animals", "kieu_tra_loi": "dien_khuyet", "cau_hoi": "Con cá tiếng Anh viết là gì?", "lua_chon": [], "dap_an_dung": "fish", "giai_thich": "Biển xanh đầy cá, cá tiếng Anh là fish, f-i-s-h nè!" },
+        { "id": "en_22", "dang_bai": "family", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Mẹ của con tiếng Anh gọi là gì?", "lua_chon": ["Mother", "Father", "Brother"], "dap_an_dung": "Mother", "giai_thich": "Mẹ là Mother, hoặc Mom cũng được nha." },
+        { "id": "en_23", "dang_bai": "family", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Father có nghĩa là ai trong gia đình?", "lua_chon": ["Bố", "Ông nội", "Em trai"], "dap_an_dung": "Bố", "giai_thich": "Father (Dad) là Bố, người anh hùng của Kem!" },
+        { "id": "en_24", "dang_bai": "colors", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Đêm tối thường hay có màu gì bọc lấy vạn vật?", "lua_chon": ["Black", "White", "Pink"], "dap_an_dung": "Black", "giai_thich": "Black là màu đen, màn đêm tăm tối nhưng rất yên bình." },
+        { "id": "en_25", "dang_bai": "animals", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp: 'Đây là con gấu'", "lua_chon": ["a", "is", "This", "bear."], "dap_an_dung": ["This", "is", "a", "bear."], "giai_thich": "Câu hoàn thiện là: This is a bear." },
+        { "id": "en_26", "dang_bai": "family", "kieu_tra_loi": "dien_khuyet", "cau_hoi": "Người sinh ra mẹ thì con gọi là bà. Bà (ngoại/nội) tiếng Anh là gì?", "lua_chon": [], "dap_an_dung": "grandmother", "giai_thich": "Bà là Grand-mother, chữ Grand ghếp với chữ Mother là ra!" }
     ],
 
     state: {
@@ -86,7 +115,10 @@ const app = {
         currentQuestion: null,
         currentSequence: [],
         score: parseInt(localStorage.getItem('kem_score')) || 0,
-        usedQuestions: []
+        usedQuestions: JSON.parse(localStorage.getItem('kem_usedQuestions')) || [],
+        fishCoins: parseInt(localStorage.getItem('kem_fishCoins')) || 0,
+        petLevel: parseInt(localStorage.getItem('kem_petLevel')) || 1,
+        petExp: parseInt(localStorage.getItem('kem_petExp')) || 0
     },
 
     sounds: {
@@ -163,12 +195,14 @@ const app = {
         }
         const qData = available[Math.floor(Math.random() * available.length)];
         this.state.usedQuestions.push(qData.id);
+        localStorage.setItem('kem_usedQuestions', JSON.stringify(this.state.usedQuestions));
         return qData;
     },
 
     init() {
         lucide.createIcons();
         this.updateStickerCount();
+        this.updateFishCount();
         this.loadHome();
         
         // Khởi tạo playlist nhạc nền
@@ -396,6 +430,12 @@ const app = {
 
         this.state.score++;
         localStorage.setItem('kem_score', this.state.score.toString());
+        
+        // Cộng cá
+        this.state.fishCoins++;
+        localStorage.setItem('kem_fishCoins', this.state.fishCoins.toString());
+        this.updateFishCount();
+
         if (this.state.score % 3 === 0) {
             this.awardSticker();
         }
@@ -804,6 +844,12 @@ const app = {
                 confetti({ particleCount: 150, spread: 80, origin: { y: 0.6 }, colors: ['#a5d8ff', '#ffdeeb', '#ffd43b'] });
                 if (fbEl) fbEl.textContent = '🎉 Xuất sắc! Phát hiện hết rồi! Chuyển cảnh thôi!';
                 this.state.score++;
+                
+                // Cộng 5 cá vì Tinh Mắt khó hơn
+                this.state.fishCoins += 5;
+                localStorage.setItem('kem_fishCoins', this.state.fishCoins.toString());
+                this.updateFishCount();
+
                 if (this.state.score % 3 === 0) this.awardSticker();
                 setTimeout(() => { this.generateDifferenceLevel(); }, 3000);
             }, 600);
@@ -830,6 +876,96 @@ const app = {
         if (target) {
             target.classList.add('hint-blink');
             setTimeout(() => target.classList.remove('hint-blink'), 2000);
+        }
+    },
+
+    // ===== HỆ THỐNG LOGIC NUÔI MÈO ===== //
+    updateFishCount() {
+        const fc = document.getElementById('fish-count');
+        if (fc) fc.innerText = this.state.fishCoins;
+        const pfc = document.getElementById('pet-fish-count');
+        if (pfc) pfc.innerText = this.state.fishCoins;
+    },
+
+    loadPetScreen() {
+        this.switchScreen('pet-screen');
+        this.updatePetUI();
+    },
+
+    getExpNeeded() {
+        // Cấp 1 cần 50, Cấp 2 cần 70, Cấp 3 cần 90...
+        return 50 + (this.state.petLevel - 1) * 20; 
+    },
+
+    getPetAvatar() {
+        if (this.state.petLevel < 5) return '🐱'; // Mèo con
+        if (this.state.petLevel < 10) return '🐈'; // Mèo lớn
+        if (this.state.petLevel < 15) return '🐯'; // Hóa Hổ
+        return '🦁'; // Hóa Sư tử
+    },
+
+    updatePetUI() {
+        document.getElementById('pet-level-display').innerText = this.state.petLevel;
+        document.getElementById('pet-exp-current').innerText = this.state.petExp;
+        
+        const expNeeded = this.getExpNeeded();
+        document.getElementById('pet-exp-needed').innerText = expNeeded;
+        
+        const percent = (this.state.petExp / expNeeded) * 100;
+        document.getElementById('pet-exp-fill').style.width = `${Math.min(percent, 100)}%`;
+        
+        document.getElementById('pet-avatar').innerText = this.getPetAvatar();
+        
+        const btn = document.getElementById('btn-feed-pet');
+        if (this.state.fishCoins <= 0) {
+            btn.disabled = true;
+            btn.style.opacity = '0.5';
+            btn.innerText = 'Bé Kem phải làm bài tập để kiếm thêm Cá nhé!';
+        } else {
+            btn.disabled = false;
+            btn.style.opacity = '1';
+            btn.innerText = 'Cho Mèo ăn (Tốn 1 🐟)';
+        }
+    },
+
+    feedPet() {
+        if (this.state.fishCoins > 0) {
+            this.playSound('click');
+            this.state.fishCoins--;
+            this.state.petExp += 10; // Mỗi con cá = 10 EXP
+            
+            // Animation ăn cá
+            const avatar = document.getElementById('pet-avatar');
+            avatar.classList.add('happy-bounce');
+            setTimeout(() => avatar.classList.remove('happy-bounce'), 800);
+            
+            const fb = document.getElementById('pet-feedback');
+            fb.innerText = "Mèo ăn ngoan quá! Ngon tuyệt! 💖";
+            fb.style.color = "#f06595";
+            
+            // Kiểm tra lên cấp
+            if (this.state.petExp >= this.getExpNeeded()) {
+                this.state.petExp -= this.getExpNeeded();
+                this.state.petLevel++;
+                this.playSound('award'); // Mượn âm thanh nhận sticker
+                
+                // Bắn pháo hoa
+                confetti({ 
+                    particleCount: 150, spread: 80, origin: { y: 0.6 },
+                    colors: ['#ffdeeb', '#f06595', '#a5d8ff']
+                });
+                
+                fb.innerText = `WOW! Mèo đã tiến hóa lên cấp ${this.state.petLevel}! 🎉`;
+            }
+            
+            // Lưu dữ liệu vào máy để không bị mất khi thoát app
+            localStorage.setItem('kem_fishCoins', this.state.fishCoins.toString());
+            localStorage.setItem('kem_petExp', this.state.petExp.toString());
+            localStorage.setItem('kem_petLevel', this.state.petLevel.toString());
+            
+            // Cập nhật lại màn hình
+            this.updateFishCount();
+            this.updatePetUI();
         }
     }
 };
