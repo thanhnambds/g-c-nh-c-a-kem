@@ -1,4 +1,4 @@
-const CACHE_NAME = 'kem-app-v1';
+const CACHE_NAME = 'kem-app-v2';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -25,7 +25,11 @@ const ASSETS_TO_CACHE = [
   'assets/Ngày Đầu Tiên Đi Học.mp3',
   'assets/Bài Học Đầu Tiên.mp3',
   'assets/Mùa xuân trên Thành phố Hồ Chí Minh - Phương Mỹ Chi Version.mp3',
-  'assets/IMG_0419.heic'
+  'assets/IMG_0419.heic',
+  'assets/geom_tri_3.svg',
+  'assets/geom_tri_multi.svg',
+  'assets/geom_tri_6.svg',
+  'assets/geom_house.svg'
 ];
 
 // Cài đặt Service Worker và lưu trữ tài nguyên
