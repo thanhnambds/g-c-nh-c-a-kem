@@ -899,6 +899,42 @@ const app = {
         this.updatePetUI();
     },
 
+    loadMusicScreen() {
+        this.switchScreen('music-screen');
+        const container = document.getElementById('music-playlist-container');
+        if (!container) return;
+        container.innerHTML = '';
+        
+        const trackNames = [
+            'Bài Học Đầu Tiên',
+            'Ngày Đầu Tiên Đi Học',
+            'Kho Nhạc Phương Mỹ Chi',
+            'Mẹ Ơi Có Biết',
+            'Nhạc Sôi Động'
+        ];
+        
+        this.bgPlaylist.forEach((trackUrl, index) => {
+            const isPlayingNode = (this.isMusicPlaying && this.bgPlaylistIndex === index) 
+                ? '<div style="color:#fa5252; font-size: 0.9em; margin-top: 5px; font-weight: bold;">(Đang phát)</div>' 
+                : '';
+            const btn = document.createElement('button');
+            btn.className = 'menu-card mini all';
+            btn.innerHTML = `
+                <div class="card-icon">🎧</div>
+                <span style="font-size: 1.1rem; line-height: 1.3;">${trackNames[index]}</span>
+                ${isPlayingNode}
+            `;
+            btn.onclick = () => {
+                this.bgPlaylistIndex = index;
+                this.bgMusic.src = this.bgPlaylist[index];
+                this.playSound('click');
+                this.forcePlayMusic();
+                setTimeout(() => this.loadMusicScreen(), 100); 
+            };
+            container.appendChild(btn);
+        });
+    },
+
     getExpNeeded() {
         // Cấp 1 cần 50, Cấp 2 cần 70, Cấp 3 cần 90...
         return 50 + (this.state.petLevel - 1) * 20; 

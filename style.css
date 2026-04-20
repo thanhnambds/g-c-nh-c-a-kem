@@ -230,6 +230,9 @@ main {
 .menu-card.vietnamese, .menu-card.ordering { border-bottom: 8px solid #ff922b; }
 .menu-card.english, .menu-card.fillin { border-bottom: 8px solid #f06595; }
 .menu-card.coloring { border-bottom: 8px solid #9c36b5; }
+.menu-card.difference { border-bottom: 8px solid #ffd43b; }
+.menu-card.pet { border-bottom: 8px solid #fa5252; }
+.menu-card.music { border-bottom: 8px solid #20c997; }
 
 /* Coloring layout */
 .coloring-container {
