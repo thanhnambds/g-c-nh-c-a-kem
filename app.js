@@ -129,13 +129,13 @@ const app = {
     },
 
     bgPlaylist: [
-        'assets/Bài Học Đầu Tiên.mp3',
-        'assets/Ngày Đầu Tiên Đi Học.mp3',
-        'assets/Mùa xuân trên Thành phố Hồ Chí Minh - Phương Mỹ Chi Version.mp3',
+        'assets/bai_hoc_dau_tien.mp3',
+        'assets/ngay_dau_tien_di_hoc.mp3',
+        'assets/mua_xuan_tren_hcm.mp3',
         'assets/me_oi_co_biet.mp3',
         'assets/bgmusic.ogg'
     ],
-    bgMusic: new Audio('assets/Bài Học Đầu Tiên.mp3'),
+    bgMusic: new Audio('assets/bai_hoc_dau_tien.mp3'),
     isMusicPlaying: false,
     shouldBePlaying: false,
 
