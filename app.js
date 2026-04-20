@@ -118,7 +118,16 @@ const app = {
         usedQuestions: JSON.parse(localStorage.getItem('kem_usedQuestions')) || [],
         fishCoins: parseInt(localStorage.getItem('kem_fishCoins')) || 0,
         petLevel: parseInt(localStorage.getItem('kem_petLevel')) || 1,
-        petExp: parseInt(localStorage.getItem('kem_petExp')) || 0
+        petExp: parseInt(localStorage.getItem('kem_petExp')) || 0,
+        petSpeciesIndex: parseInt(localStorage.getItem('kem_petSpeciesIndex')) || 0,
+        petSpeciesList: [
+            { id: 'cat', name: 'Mèo', food: 'cá', icon: 'fish_food.png' },
+            { id: 'pinky_horse', name: 'Ngựa Pinky', food: 'táo', icon: 'apple_food.png' },
+            { id: 'elsa', name: 'Elsa', food: 'bụi phép', icon: 'magic_food.png' },
+            { id: 'dog', name: 'Cún', food: 'xương', icon: 'bone_food.png' },
+            { id: 'bear', name: 'Gấu', food: 'mật ong', icon: 'honey_food.png' },
+            { id: 'horse', name: 'Ngựa', food: 'cỏ', icon: 'grass_food.png' }
+        ]
     },
 
     sounds: {
@@ -210,8 +219,23 @@ const app = {
         lucide.createIcons();
         this.updateStickerCount();
         this.updateFishCount();
-        this.loadHome();
         
+        // Thiết lập trạng thái ban đầu cho lịch sử trình duyệt
+        if (!history.state) {
+            history.replaceState({ screenId: 'home-screen' }, '', '');
+        }
+
+        this.loadHome(false);
+        
+        // Lắng nghe sự kiện nút Back/Forward của trình duyệt
+        window.onpopstate = (event) => {
+            if (event.state && event.state.screenId) {
+                this.switchScreen(event.state.screenId, false);
+            } else {
+                this.loadHome(false);
+            }
+        };
+
         // Khởi tạo playlist nhạc nền
         this.bgPlaylistIndex = 0;
         this.bgMusic = new Audio(this.bgPlaylist[0]);
@@ -280,14 +304,19 @@ const app = {
         document.getElementById('sticker-count').innerText = this.state.stickers.length;
     },
 
-    loadHome() {
-        this.switchScreen('home-screen');
+    loadHome(pushHistory = true) {
+        this.switchScreen('home-screen', pushHistory);
     },
 
-    switchScreen(screenId) {
+    switchScreen(screenId, pushHistory = true) {
+        if (pushHistory) {
+            history.pushState({ screenId: screenId }, '', '');
+        }
+
         this.playSound('click');
         document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-        document.getElementById(screenId).classList.add('active');
+        const target = document.getElementById(screenId);
+        if (target) target.classList.add('active');
         
         const sidePhoto = document.querySelector('.side-photo');
         if (sidePhoto) {
@@ -973,24 +1002,33 @@ const app = {
 
     feedPet() {
         if (this.state.fishCoins > 0) {
+            const species = this.state.petSpeciesList[this.state.petSpeciesIndex];
             this.playSound('click');
             this.state.fishCoins--;
-            this.state.petExp += 10; // Mỗi con cá = 10 EXP
+            this.state.petExp += 10;
             
-            // Animation ăn cá
-            const avatar = document.getElementById('pet-avatar');
-            avatar.classList.add('happy-bounce');
-            setTimeout(() => avatar.classList.remove('happy-bounce'), 800);
+            // Hiệu ứng cho ăn
+            const foodAnim = document.getElementById('food-animation');
+            foodAnim.classList.remove('hidden', 'animate-toss');
+            void foodAnim.offsetWidth; // trigger reflow
+            foodAnim.classList.add('animate-toss');
+            
+            setTimeout(() => {
+                foodAnim.classList.add('hidden');
+                const avatar = document.querySelector('.pet-avatar-wrapper');
+                avatar.classList.add('happy-bounce');
+                setTimeout(() => avatar.classList.remove('happy-bounce'), 800);
+            }, 800);
             
             const fb = document.getElementById('pet-feedback');
-            fb.innerText = "Mèo ăn ngoan quá! Ngon tuyệt! 💖";
+            fb.innerText = `${species.name} ăn ngoan quá! Tuyệt vời! 💖`;
             fb.style.color = "#f06595";
             
             // Kiểm tra lên cấp
             if (this.state.petExp >= this.getExpNeeded()) {
                 this.state.petExp -= this.getExpNeeded();
                 this.state.petLevel++;
-                this.playSound('award'); // Mượn âm thanh nhận sticker
+                this.playSound('award');
                 
                 // Bắn pháo hoa
                 confetti({ 
@@ -998,15 +1036,28 @@ const app = {
                     colors: ['#ffdeeb', '#f06595', '#a5d8ff']
                 });
                 
-                fb.innerText = `WOW! Mèo đã tiến hóa lên cấp ${this.state.petLevel}! 🎉`;
+                // Kiểm tra tiến hóa
+                if (this.state.petLevel === 5 || this.state.petLevel === 10 || this.state.petLevel === 15) {
+                    fb.innerText = `CHÚC MỪNG! ${species.name} đã lớn lên rồi! ✨`;
+                } else if (this.state.petLevel >= 20) {
+                    // Chuyển sang loài mới
+                    fb.innerText = `BÉ KEM THẬT TUYỆT! Đã nuôi thành công ${species.name}! 🎉`;
+                    setTimeout(() => {
+                        this.state.petLevel = 1;
+                        this.state.petExp = 0;
+                        this.state.petSpeciesIndex = (this.state.petSpeciesIndex + 1) % this.state.petSpeciesList.length;
+                        localStorage.setItem('kem_petSpeciesIndex', this.state.petSpeciesIndex.toString());
+                        this.updatePetUI();
+                    }, 3000);
+                } else {
+                    fb.innerText = `WOW! ${species.name} đã lên cấp ${this.state.petLevel}! 🎉`;
+                }
             }
             
-            // Lưu dữ liệu vào máy để không bị mất khi thoát app
             localStorage.setItem('kem_fishCoins', this.state.fishCoins.toString());
             localStorage.setItem('kem_petExp', this.state.petExp.toString());
             localStorage.setItem('kem_petLevel', this.state.petLevel.toString());
             
-            // Cập nhật lại màn hình
             this.updateFishCount();
             this.updatePetUI();
         }
