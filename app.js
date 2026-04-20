@@ -925,7 +925,17 @@ const app = {
 
     loadPetScreen() {
         this.switchScreen('pet-screen');
+        this.randomizePetScene();
         this.updatePetUI();
+    },
+
+    randomizePetScene() {
+        const scene = document.getElementById('pet-scene');
+        if (scene) {
+            scene.classList.remove('scene-room', 'scene-garden');
+            const bgClass = Math.random() > 0.5 ? 'scene-room' : 'scene-garden';
+            scene.classList.add(bgClass);
+        }
     },
 
     loadMusicScreen() {
@@ -969,14 +979,21 @@ const app = {
         return 50 + (this.state.petLevel - 1) * 20; 
     },
 
-    getPetAvatar() {
-        if (this.state.petLevel < 5) return '🐱'; // Mèo con
-        if (this.state.petLevel < 10) return '🐈'; // Mèo lớn
-        if (this.state.petLevel < 15) return '🐯'; // Hóa Hổ
-        return '🦁'; // Hóa Sư tử
+    getPetImage() {
+        const species = this.state.petSpeciesList[this.state.petSpeciesIndex].id;
+        let stage = 1;
+        if (this.state.petLevel >= 15) stage = 4;
+        else if (this.state.petLevel >= 10) stage = 3;
+        else if (this.state.petLevel >= 5) stage = 2;
+        
+        // Trả về ảnh theo cấu trúc: assets/pet_{species}_{stage}.png
+        return `assets/pet_${species}_${stage}.png`;
     },
 
     updatePetUI() {
+        if (!document.getElementById('pet-screen').classList.contains('active')) return;
+
+        const species = this.state.petSpeciesList[this.state.petSpeciesIndex];
         document.getElementById('pet-level-display').innerText = this.state.petLevel;
         document.getElementById('pet-exp-current').innerText = this.state.petExp;
         
@@ -986,18 +1003,29 @@ const app = {
         const percent = (this.state.petExp / expNeeded) * 100;
         document.getElementById('pet-exp-fill').style.width = `${Math.min(percent, 100)}%`;
         
-        document.getElementById('pet-avatar').innerText = this.getPetAvatar();
+        // Cập nhật ảnh thú
+        const petImg = document.getElementById('pet-image');
+        if (petImg) petImg.src = this.getPetImage();
         
+        // Cập nhật icon thức ăn trong hiệu ứng
+        const foodIcon = document.getElementById('food-icon');
+        if (foodIcon) foodIcon.src = `assets/${species.icon}`;
+        
+        // Cập nhật nút bấm
         const btn = document.getElementById('btn-feed-pet');
         if (this.state.fishCoins <= 0) {
             btn.disabled = true;
             btn.style.opacity = '0.5';
-            btn.innerText = 'Bé Kem phải làm bài tập để kiếm thêm Cá nhé!';
+            btn.innerText = `Kiếm thêm cá để cho ${species.name} ăn nhé!`;
         } else {
             btn.disabled = false;
             btn.style.opacity = '1';
-            btn.innerText = 'Cho Mèo ăn (Tốn 1 🐟)';
+            btn.innerText = `Cho ${species.name} ăn (${species.food})`;
         }
+        
+        // Cập nhật tiêu đề màn hình
+        const title = document.querySelector('#pet-screen h2');
+        if (title) title.innerText = `Nhà của ${species.name} 🏠`;
     },
 
     feedPet() {

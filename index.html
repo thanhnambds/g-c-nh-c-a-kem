@@ -228,13 +228,20 @@
                         <h2>Nhà Của Mèo 🐱</h2>
                     </div>
                     <div class="game-container pet-container">
-                        <div class="stats-row">
-                            <div>Cá đang có: <strong id="pet-fish-count" style="color: #4dabf7;">0</strong> 🐟</div>
-                            <div>Cấp độ Mèo: <strong id="pet-level-display" style="color: #f06595;">1</strong></div>
+                        <div class="pet-scene" id="pet-scene">
+                            <!-- Background injected by dynamic selection -->
+                            <div class="pet-avatar-wrapper">
+                                <img id="pet-image" class="pet-image" src="assets/pet_cat_1.png" alt="Pet">
+                            </div>
+                            <!-- Food animation element -->
+                            <div id="food-animation" class="food-animation hidden">
+                                <img id="food-icon" src="assets/fish_food.png" alt="Food">
+                            </div>
                         </div>
-                        
-                        <div class="pet-avatar-wrapper">
-                            <div id="pet-avatar" class="pet-avatar">🐱</div>
+
+                        <div class="stats-row">
+                            <div class="stat-item">Cá: <strong id="pet-fish-count">0</strong> 🐟</div>
+                            <div class="stat-item">Cấp: <strong id="pet-level-display">1</strong></div>
                         </div>
                         
                         <div class="exp-section">
@@ -244,7 +251,7 @@
                             <div class="exp-text">Điểm kinh nghiệm: <span id="pet-exp-current">0</span> / <span id="pet-exp-needed">50</span></div>
                         </div>
                         
-                        <button id="btn-feed-pet" class="btn-submit" style="background-color: #ff922b;" onclick="app.feedPet()">Cho Mèo ăn (Tốn 1 🐟)</button>
+                        <button id="btn-feed-pet" class="btn-submit" style="background-color: #ff922b;" onclick="app.feedPet()">Cho ăn (Tốn 1 🐟)</button>
                         <div id="pet-feedback" class="feedback-msg"></div>
                     </div>
                 </div>
