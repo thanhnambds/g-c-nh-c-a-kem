@@ -72,10 +72,10 @@ const app = {
         { "id": "vn_18", "dang_bai": "cau_tu", "kieu_tra_loi": "sap_xep", "cau_hoi": "Xếp cho thành câu đúng:", "lua_chon": ["sáng", "Mặt", "tỏa", "trời"], "dap_an_dung": ["Mặt", "trời", "tỏa", "sáng"], "giai_thich": "Câu đúng: Mặt trời tỏa sáng." },
         { "id": "vn_19", "dang_bai": "cau_tu", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Từ nào chỉ màu sắc của lá cây mùa xuân?", "lua_chon": ["Màu xanh", "Màu trắng", "Màu đen"], "dap_an_dung": "Màu xanh", "giai_thich": "Lá cây màu xanh tươi tắn đấy con." },
         { "id": "vn_20", "dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Đâu là từ viết ĐÚNG chính tả?", "lua_chon": ["Gia đình", "Da đình", "Ra đình"], "dap_an_dung": "Gia đình", "giai_thich": "Chữ 'Gia đình' viết bằng âm Gi con nhé." },
-        { "id": "vn_21", "dang_bai": "cau_tu", "kieu_tra_loi": "dien_khuyet", "cau_hoi": "Ăn quả nhớ kẻ trồng ...", "lua_chon": [], "dap_an_dung": "cây", "giai_thich": "Câu tục ngữ là 'Ăn quả nhớ kẻ trồng cây' khuyên chúng ta phải biết ơn." },
+        { "id": "vn_21", "dang_bai": "cau_tu", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Ăn quả nhớ kẻ trồng ...", "lua_chon": ["cây", "hoa", "chuối"], "dap_an_dung": "cây", "giai_thich": "Câu tục ngữ là 'Ăn quả nhớ kẻ trồng cây' khuyên chúng ta phải biết ơn." },
         { "id": "vn_22", "dang_bai": "cau_tu", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Từ nào TRÁI NGHĨA với từ 'To lớn'?", "lua_chon": ["Bé nhỏ", "Khổng lồ", "Cao vút"], "dap_an_dung": "Bé nhỏ", "giai_thich": "Trái nghĩa với To lớn là Bé nhỏ (hoặc Nhỏ xíu) con nha." },
         { "id": "vn_23", "dang_bai": "cau_tu", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp đoạn thơ quen thuộc:", "lua_chon": ["Ai", "chăm", "Kem", "bảo"], "dap_an_dung": ["Ai", "bảo", "Kem", "chăm"], "giai_thich": "Hoặc là 'Kem rất chăm' hihi!" },
-        { "id": "vn_24", "dang_bai": "chinh_ta", "kieu_tra_loi": "dien_khuyet", "cau_hoi": "Chữ Mẹ và chữ Ba, chữ nào có dấu nặng?", "lua_chon": [], "dap_an_dung": "Mẹ", "giai_thich": "Đúng rồi! Chữ 'Mẹ' có dấu nặng ở bên dưới chữ e nè." },
+        { "id": "vn_24", "dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Chữ Mẹ và chữ Ba, chữ nào có dấu nặng?", "lua_chon": ["Chữ Mẹ", "Chữ Ba", "Đều không có"], "dap_an_dung": "Chữ Mẹ", "giai_thich": "Đúng rồi! Chữ 'Mẹ' có dấu nặng ở bên dưới chữ e nè." },
         { "id": "vn_25", "dang_bai": "cau_tu", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Món đồ nào dùng để đội lên đầu khi ra nắng?", "lua_chon": ["Cái mũ", "Cái ô", "Cả hai đúng"], "dap_an_dung": "Cả hai đúng", "giai_thich": "Trời nắng mình có thể đội mũ hoặc che ô đều để che đầu nhé." },
         { "id": "vn_26", "dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Chọn từ đúng: Buổi tối, ...ăng sáng vằng vặc trên cao", "lua_chon": ["tr", "ch"], "dap_an_dung": "tr", "giai_thich": "Viết đúng là 'trăng sáng', dùng âm 'tr'." }
     ],
@@ -128,6 +128,13 @@ const app = {
         award: new Audio('https://cdnjs.cloudflare.com/ajax/libs/ion-sound/3.0.7/sounds/glass.mp3')
     },
 
+    bgPlaylist: [
+        'assets/Bài Học Đầu Tiên.mp3',
+        'assets/Ngày Đầu Tiên Đi Học.mp3',
+        'assets/Mùa xuân trên Thành phố Hồ Chí Minh - Phương Mỹ Chi Version.mp3',
+        'assets/me_oi_co_biet.mp3',
+        'assets/bgmusic.ogg'
+    ],
     bgMusic: new Audio('assets/Bài Học Đầu Tiên.mp3'),
     isMusicPlaying: false,
     shouldBePlaying: false,
