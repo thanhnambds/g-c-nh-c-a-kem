@@ -373,6 +373,64 @@ main {
     width: 100%;
 }
 
+.level-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.level-card {
+    background: white;
+    border: 3px solid #ffdeeb;
+    border-radius: 16px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(240, 101, 149, 0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+
+.level-card:active {
+    transform: scale(0.95);
+}
+
+.level-icon {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.level-text {
+    font-weight: 700;
+    color: #f06595;
+    font-size: 1.1rem;
+}
+
+.level-card.completed {
+    border-color: #ffd8a8;
+    background: #fff9db;
+    opacity: 0.9;
+}
+
+.level-card.completed .level-text {
+    color: #f59f00;
+}
+
+.level-badge {
+    margin-top: 8px;
+    background: #40c057;
+    color: white;
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
 .fill-container {
     display: flex;
     flex-direction: column;

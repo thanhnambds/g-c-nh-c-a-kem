@@ -49,7 +49,59 @@ const app = {
         { "id": "m46", "dang_bai": "cau_tao_so", "kieu_tra_loi": "dien_khuyet", "cau_hoi": "Số lớn nhất có 2 chữ số khác nhau là số mấy?", "lua_chon": [], "dap_an_dung": "98", "giai_thich": "Số 99 là lớn nhất có 2 chữ số giống nhau, số liền trước nó là 98 có chữ số 9 và 8 khác nhau nha." },
         { "id": "m47", "dang_bai": "phep_tinh", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp để tạo ra phép tính ĐÚNG:", "lua_chon": ["7", "=", "4", "+", "3"], "dap_an_dung": ["3", "+", "4", "=", "7"], "giai_thich": "Ba cộng bốn bằng bảy, hoặc 4 + 3 = 7 đều được!" },
         { "id": "m48", "dang_bai": "do_dai", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Gang tay của Kem dài khoảng bao nhiêu?", "lua_chon": ["15 cm", "1 m", "10 m"], "dap_an_dung": "15 cm", "giai_thich": "Gang tay bé xíu chỉ khoảng mười mấy xăng-ti-mét thôi, 1m là bằng bé cao rồi (quá dài)!" }
-    ],
+    ,
+        {"dang_bai": "phep_tinh", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Con hãy tính kết quả của: 65 + 57 = ?", "giai_thich": "65 cộng thêm 57 bằng 122 con nhé.", "id": "m_gen_0", "dap_an_dung": "122", "lua_chon": ["123", "121", "122"]},
+        {"dang_bai": "phep_tinh", "kieu_tra_loi": "dien_khuyet", "cau_hoi": "Tính nhẩm nhé: 53 - 51 =", "lua_chon": [], "giai_thich": "53 trừ 51 bằng 2.", "id": "m_gen_1", "dap_an_dung": "2"},
+        {"dang_bai": "cau_tao_so", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Số liền trước của số 87 là số nào?", "giai_thich": "Liền trước 87 là 86.", "id": "m_gen_2", "dap_an_dung": "86", "lua_chon": ["88", "87", "86"]},
+        {"dang_bai": "cau_tao_so", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Số liền sau của số 90 là số nào?", "giai_thich": "Liền sau 90 là 91.", "id": "m_gen_3", "dap_an_dung": "91", "lua_chon": ["91", "89", "92"]},
+        {"dang_bai": "so_sanh", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Con hãy điền dấu thích hợp: 42 ... 14", "lua_chon": [">", "<", "="], "giai_thich": "Vì 42 lớn hơn 14.", "id": "m_gen_4", "dap_an_dung": ">"},
+        {"dang_bai": "phep_tinh", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Con hãy tính kết quả của: 41 + 73 = ?", "giai_thich": "41 cộng thêm 73 bằng 114 con nhé.", "id": "m_gen_5", "dap_an_dung": "114", "lua_chon": ["114", "113", "115"]},
+        {"dang_bai": "phep_tinh", "kieu_tra_loi": "dien_khuyet", "cau_hoi": "Tính nhẩm nhé: 61 - 59 =", "lua_chon": [], "giai_thich": "61 trừ 59 bằng 2.", "id": "m_gen_6", "dap_an_dung": "2"},
+        {"dang_bai": "cau_tao_so", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Số liền trước của số 24 là số nào?", "giai_thich": "Liền trước 24 là 23.", "id": "m_gen_7", "dap_an_dung": "23", "lua_chon": ["25", "23", "24"]},
+        {"dang_bai": "cau_tao_so", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Số liền sau của số 89 là số nào?", "giai_thich": "Liền sau 89 là 90.", "id": "m_gen_8", "dap_an_dung": "90", "lua_chon": ["90", "91", "88"]},
+        {"dang_bai": "so_sanh", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Con hãy điền dấu thích hợp: 15 ... 51", "lua_chon": [">", "<", "="], "giai_thich": "Vì 15 bé hơn 51.", "id": "m_gen_9", "dap_an_dung": "<"},
+        {"dang_bai": "phep_tinh", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Con hãy tính kết quả của: 32 + 10 = ?", "giai_thich": "32 cộng thêm 10 bằng 42 con nhé.", "id": "m_gen_10", "dap_an_dung": "42", "lua_chon": ["42", "41", "43"]},
+        {"dang_bai": "phep_tinh", "kieu_tra_loi": "dien_khuyet", "cau_hoi": "Tính nhẩm nhé: 75 - 39 =", "lua_chon": [], "giai_thich": "75 trừ 39 bằng 36.", "id": "m_gen_11", "dap_an_dung": "36"},
+        {"dang_bai": "cau_tao_so", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Số liền trước của số 21 là số nào?", "giai_thich": "Liền trước 21 là 20.", "id": "m_gen_12", "dap_an_dung": "20", "lua_chon": ["21", "20", "22"]},
+        {"dang_bai": "cau_tao_so", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Số liền sau của số 47 là số nào?", "giai_thich": "Liền sau 47 là 48.", "id": "m_gen_13", "dap_an_dung": "48", "lua_chon": ["46", "49", "48"]},
+        {"dang_bai": "so_sanh", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Con hãy điền dấu thích hợp: 77 ... 82", "lua_chon": [">", "<", "="], "giai_thich": "Vì 77 bé hơn 82.", "id": "m_gen_14", "dap_an_dung": "<"},
+        {"dang_bai": "phep_tinh", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Con hãy tính kết quả của: 76 + 12 = ?", "giai_thich": "76 cộng thêm 12 bằng 88 con nhé.", "id": "m_gen_15", "dap_an_dung": "88", "lua_chon": ["87", "89", "88"]},
+        {"dang_bai": "phep_tinh", "kieu_tra_loi": "dien_khuyet", "cau_hoi": "Tính nhẩm nhé: 79 - 73 =", "lua_chon": [], "giai_thich": "79 trừ 73 bằng 6.", "id": "m_gen_16", "dap_an_dung": "6"},
+        {"dang_bai": "cau_tao_so", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Số liền trước của số 36 là số nào?", "giai_thich": "Liền trước 36 là 35.", "id": "m_gen_17", "dap_an_dung": "35", "lua_chon": ["37", "35", "36"]},
+        {"dang_bai": "cau_tao_so", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Số liền sau của số 55 là số nào?", "giai_thich": "Liền sau 55 là 56.", "id": "m_gen_18", "dap_an_dung": "56", "lua_chon": ["56", "57", "54"]},
+        {"dang_bai": "so_sanh", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Con hãy điền dấu thích hợp: 67 ... 37", "lua_chon": [">", "<", "="], "giai_thich": "Vì 67 lớn hơn 37.", "id": "m_gen_19", "dap_an_dung": ">"},
+        {"dang_bai": "phep_tinh", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Con hãy tính kết quả của: 81 + 47 = ?", "giai_thich": "81 cộng thêm 47 bằng 128 con nhé.", "id": "m_gen_20", "dap_an_dung": "128", "lua_chon": ["128", "127", "129"]},
+        {"dang_bai": "phep_tinh", "kieu_tra_loi": "dien_khuyet", "cau_hoi": "Tính nhẩm nhé: 42 - 18 =", "lua_chon": [], "giai_thich": "42 trừ 18 bằng 24.", "id": "m_gen_21", "dap_an_dung": "24"},
+        {"dang_bai": "cau_tao_so", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Số liền trước của số 64 là số nào?", "giai_thich": "Liền trước 64 là 63.", "id": "m_gen_22", "dap_an_dung": "63", "lua_chon": ["63", "64", "65"]},
+        {"dang_bai": "cau_tao_so", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Số liền sau của số 70 là số nào?", "giai_thich": "Liền sau 70 là 71.", "id": "m_gen_23", "dap_an_dung": "71", "lua_chon": ["71", "72", "69"]},
+        {"dang_bai": "so_sanh", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Con hãy điền dấu thích hợp: 67 ... 66", "lua_chon": [">", "<", "="], "giai_thich": "Vì 67 lớn hơn 66.", "id": "m_gen_24", "dap_an_dung": ">"},
+        {"dang_bai": "phep_tinh", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Con hãy tính kết quả của: 10 + 92 = ?", "giai_thich": "10 cộng thêm 92 bằng 102 con nhé.", "id": "m_gen_25", "dap_an_dung": "102", "lua_chon": ["103", "102", "101"]},
+        {"dang_bai": "phep_tinh", "kieu_tra_loi": "dien_khuyet", "cau_hoi": "Tính nhẩm nhé: 49 - 32 =", "lua_chon": [], "giai_thich": "49 trừ 32 bằng 17.", "id": "m_gen_26", "dap_an_dung": "17"},
+        {"dang_bai": "cau_tao_so", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Số liền trước của số 25 là số nào?", "giai_thich": "Liền trước 25 là 24.", "id": "m_gen_27", "dap_an_dung": "24", "lua_chon": ["26", "24", "25"]},
+        {"dang_bai": "cau_tao_so", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Số liền sau của số 25 là số nào?", "giai_thich": "Liền sau 25 là 26.", "id": "m_gen_28", "dap_an_dung": "26", "lua_chon": ["27", "26", "24"]},
+        {"dang_bai": "so_sanh", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Con hãy điền dấu thích hợp: 54 ... 39", "lua_chon": [">", "<", "="], "giai_thich": "Vì 54 lớn hơn 39.", "id": "m_gen_29", "dap_an_dung": ">"},
+        {"dang_bai": "phep_tinh", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Con hãy tính kết quả của: 86 + 35 = ?", "giai_thich": "86 cộng thêm 35 bằng 121 con nhé.", "id": "m_gen_30", "dap_an_dung": "121", "lua_chon": ["121", "120", "122"]},
+        {"dang_bai": "phep_tinh", "kieu_tra_loi": "dien_khuyet", "cau_hoi": "Tính nhẩm nhé: 61 - 55 =", "lua_chon": [], "giai_thich": "61 trừ 55 bằng 6.", "id": "m_gen_31", "dap_an_dung": "6"},
+        {"dang_bai": "cau_tao_so", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Số liền trước của số 77 là số nào?", "giai_thich": "Liền trước 77 là 76.", "id": "m_gen_32", "dap_an_dung": "76", "lua_chon": ["76", "77", "78"]},
+        {"dang_bai": "cau_tao_so", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Số liền sau của số 45 là số nào?", "giai_thich": "Liền sau 45 là 46.", "id": "m_gen_33", "dap_an_dung": "46", "lua_chon": ["46", "47", "44"]},
+        {"dang_bai": "so_sanh", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Con hãy điền dấu thích hợp: 21 ... 84", "lua_chon": [">", "<", "="], "giai_thich": "Vì 21 bé hơn 84.", "id": "m_gen_34", "dap_an_dung": "<"},
+        {"dang_bai": "phep_tinh", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Con hãy tính kết quả của: 56 + 31 = ?", "giai_thich": "56 cộng thêm 31 bằng 87 con nhé.", "id": "m_gen_35", "dap_an_dung": "87", "lua_chon": ["88", "87", "86"]},
+        {"dang_bai": "phep_tinh", "kieu_tra_loi": "dien_khuyet", "cau_hoi": "Tính nhẩm nhé: 44 - 28 =", "lua_chon": [], "giai_thich": "44 trừ 28 bằng 16.", "id": "m_gen_36", "dap_an_dung": "16"},
+        {"dang_bai": "cau_tao_so", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Số liền trước của số 68 là số nào?", "giai_thich": "Liền trước 68 là 67.", "id": "m_gen_37", "dap_an_dung": "67", "lua_chon": ["68", "67", "69"]},
+        {"dang_bai": "cau_tao_so", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Số liền sau của số 33 là số nào?", "giai_thich": "Liền sau 33 là 34.", "id": "m_gen_38", "dap_an_dung": "34", "lua_chon": ["32", "34", "35"]},
+        {"dang_bai": "so_sanh", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Con hãy điền dấu thích hợp: 61 ... 44", "lua_chon": [">", "<", "="], "giai_thich": "Vì 61 lớn hơn 44.", "id": "m_gen_39", "dap_an_dung": ">"},
+        {"dang_bai": "phep_tinh", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Con hãy tính kết quả của: 39 + 35 = ?", "giai_thich": "39 cộng thêm 35 bằng 74 con nhé.", "id": "m_gen_40", "dap_an_dung": "74", "lua_chon": ["75", "73", "74"]},
+        {"dang_bai": "phep_tinh", "kieu_tra_loi": "dien_khuyet", "cau_hoi": "Tính nhẩm nhé: 51 - 15 =", "lua_chon": [], "giai_thich": "51 trừ 15 bằng 36.", "id": "m_gen_41", "dap_an_dung": "36"},
+        {"dang_bai": "cau_tao_so", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Số liền trước của số 32 là số nào?", "giai_thich": "Liền trước 32 là 31.", "id": "m_gen_42", "dap_an_dung": "31", "lua_chon": ["31", "32", "33"]},
+        {"dang_bai": "cau_tao_so", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Số liền sau của số 35 là số nào?", "giai_thich": "Liền sau 35 là 36.", "id": "m_gen_43", "dap_an_dung": "36", "lua_chon": ["34", "37", "36"]},
+        {"dang_bai": "so_sanh", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Con hãy điền dấu thích hợp: 18 ... 44", "lua_chon": [">", "<", "="], "giai_thich": "Vì 18 bé hơn 44.", "id": "m_gen_44", "dap_an_dung": "<"},
+        {"dang_bai": "phep_tinh", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Con hãy tính kết quả của: 78 + 92 = ?", "giai_thich": "78 cộng thêm 92 bằng 170 con nhé.", "id": "m_gen_45", "dap_an_dung": "170", "lua_chon": ["169", "171", "170"]},
+        {"dang_bai": "phep_tinh", "kieu_tra_loi": "dien_khuyet", "cau_hoi": "Tính nhẩm nhé: 61 - 59 =", "lua_chon": [], "giai_thich": "61 trừ 59 bằng 2.", "id": "m_gen_46", "dap_an_dung": "2"},
+        {"dang_bai": "cau_tao_so", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Số liền trước của số 38 là số nào?", "giai_thich": "Liền trước 38 là 37.", "id": "m_gen_47", "dap_an_dung": "37", "lua_chon": ["38", "39", "37"]},
+        {"dang_bai": "cau_tao_so", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Số liền sau của số 30 là số nào?", "giai_thich": "Liền sau 30 là 31.", "id": "m_gen_48", "dap_an_dung": "31", "lua_chon": ["32", "31", "29"]},
+        {"dang_bai": "so_sanh", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Con hãy điền dấu thích hợp: 75 ... 40", "lua_chon": [">", "<", "="], "giai_thich": "Vì 75 lớn hơn 40.", "id": "m_gen_49", "dap_an_dung": ">"},
+        {"dang_bai": "phep_tinh", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Con hãy tính kết quả của: 75 + 30 = ?", "giai_thich": "75 cộng thêm 30 bằng 105 con nhé.", "id": "m_gen_50", "dap_an_dung": "105", "lua_chon": ["104", "105", "106"]},
+        {"dang_bai": "phep_tinh", "kieu_tra_loi": "dien_khuyet", "cau_hoi": "Tính nhẩm nhé: 74 - 46 =", "lua_chon": [], "giai_thich": "74 trừ 46 bằng 28.", "id": "m_gen_51", "dap_an_dung": "28"}],
 
     vietnameseQuestions: [
         { "id": "vn_01", "dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Con hãy chọn chữ thích hợp điền vào chỗ trống: Học ... bài", "lua_chon": ["thuộc", "thược", "thuột"], "dap_an_dung": "thuộc", "giai_thich": "Từ đúng phải là 'học thuộc' con nhé." },
@@ -78,7 +130,81 @@ const app = {
         { "id": "vn_24", "dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Chữ Mẹ và chữ Ba, chữ nào có dấu nặng?", "lua_chon": ["Chữ Mẹ", "Chữ Ba", "Đều không có"], "dap_an_dung": "Chữ Mẹ", "giai_thich": "Đúng rồi! Chữ 'Mẹ' có dấu nặng ở bên dưới chữ e nè." },
         { "id": "vn_25", "dang_bai": "cau_tu", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Món đồ nào dùng để đội lên đầu khi ra nắng?", "lua_chon": ["Cái mũ", "Cái ô", "Cả hai đúng"], "dap_an_dung": "Cả hai đúng", "giai_thich": "Trời nắng mình có thể đội mũ hoặc che ô đều để che đầu nhé." },
         { "id": "vn_26", "dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Chọn từ đúng: Buổi tối, ...ăng sáng vằng vặc trên cao", "lua_chon": ["tr", "ch"], "dap_an_dung": "tr", "giai_thich": "Viết đúng là 'trăng sáng', dùng âm 'tr'." }
-    ],
+    ,
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Chọn từ đúng chính tả: Con ...", "giai_thich": "Viết đúng là con trâu.", "id": "vn_gen_0", "dap_an_dung": "trâu", "lua_chon": ["trâu", "châu"]},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Điền l hay n: ...á cờ", "dap_an_dung": "l", "lua_chon": ["l", "n"], "giai_thich": "Viết đúng là lá cờ.", "id": "vn_gen_1"},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Điền s hay x: Quả ...oài", "dap_an_dung": "x", "lua_chon": ["s", "x"], "giai_thich": "Viết đúng là quả xoài.", "id": "vn_gen_2"},
+        {"dang_bai": "cau_tu", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp thành câu đúng:", "giai_thich": "Câu hoàn chỉnh: Kem rất giỏi.", "id": "vn_gen_3", "dap_an_dung": ["Kem", "rất", "giỏi"], "lua_chon": ["Kem", "rất", "giỏi"]},
+        {"dang_bai": "cau_tu", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Đâu là tên một loại quả?", "giai_thich": "Đó là một loại trái cây thơm ngon.", "id": "vn_gen_4", "dap_an_dung": "Quả dâu tây", "lua_chon": ["Con lợn", "Quả dâu tây", "Cái ghế"]},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Chọn từ đúng chính tả: Con ...", "giai_thich": "Viết đúng là con trâu.", "id": "vn_gen_5", "dap_an_dung": "trâu", "lua_chon": ["trâu", "châu"]},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Điền l hay n: ...á cờ", "dap_an_dung": "l", "lua_chon": ["l", "n"], "giai_thich": "Viết đúng là lá cờ.", "id": "vn_gen_6"},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Điền s hay x: Quả ...oài", "dap_an_dung": "x", "lua_chon": ["s", "x"], "giai_thich": "Viết đúng là quả xoài.", "id": "vn_gen_7"},
+        {"dang_bai": "cau_tu", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp thành câu đúng:", "giai_thich": "Câu hoàn chỉnh: Ba rất đẹp.", "id": "vn_gen_8", "dap_an_dung": ["Ba", "rất", "đẹp"], "lua_chon": ["Ba", "rất", "đẹp"]},
+        {"dang_bai": "cau_tu", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Đâu là tên một loại quả?", "giai_thich": "Đó là một loại trái cây thơm ngon.", "id": "vn_gen_9", "dap_an_dung": "Quả dâu tây", "lua_chon": ["Quả dâu tây", "Cái ghế", "Con lợn"]},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Chọn từ đúng chính tả: Con ...", "giai_thich": "Viết đúng là con trâu.", "id": "vn_gen_10", "dap_an_dung": "trâu", "lua_chon": ["trâu", "châu"]},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Điền l hay n: ...á cờ", "dap_an_dung": "l", "lua_chon": ["l", "n"], "giai_thich": "Viết đúng là lá cờ.", "id": "vn_gen_11"},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Điền s hay x: Quả ...oài", "dap_an_dung": "x", "lua_chon": ["s", "x"], "giai_thich": "Viết đúng là quả xoài.", "id": "vn_gen_12"},
+        {"dang_bai": "cau_tu", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp thành câu đúng:", "giai_thich": "Câu hoàn chỉnh: Mẹ rất ngoan.", "id": "vn_gen_13", "dap_an_dung": ["Mẹ", "rất", "ngoan"], "lua_chon": ["ngoan", "rất", "Mẹ"]},
+        {"dang_bai": "cau_tu", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Đâu là tên một loại quả?", "giai_thich": "Đó là một loại trái cây thơm ngon.", "id": "vn_gen_14", "dap_an_dung": "Quả dâu tây", "lua_chon": ["Cái ghế", "Con lợn", "Quả dâu tây"]},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Chọn từ đúng chính tả: Con ...", "giai_thich": "Viết đúng là con trâu.", "id": "vn_gen_15", "dap_an_dung": "trâu", "lua_chon": ["trâu", "châu"]},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Điền l hay n: ...á cờ", "dap_an_dung": "l", "lua_chon": ["l", "n"], "giai_thich": "Viết đúng là lá cờ.", "id": "vn_gen_16"},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Điền s hay x: Quả ...oài", "dap_an_dung": "x", "lua_chon": ["s", "x"], "giai_thich": "Viết đúng là quả xoài.", "id": "vn_gen_17"},
+        {"dang_bai": "cau_tu", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp thành câu đúng:", "giai_thich": "Câu hoàn chỉnh: Kem rất giỏi.", "id": "vn_gen_18", "dap_an_dung": ["Kem", "rất", "giỏi"], "lua_chon": ["Kem", "giỏi", "rất"]},
+        {"dang_bai": "cau_tu", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Đâu là tên một loại quả?", "giai_thich": "Đó là một loại trái cây thơm ngon.", "id": "vn_gen_19", "dap_an_dung": "Quả dâu tây", "lua_chon": ["Cái ghế", "Con lợn", "Quả dâu tây"]},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Chọn từ đúng chính tả: Con ...", "giai_thich": "Viết đúng là con trâu.", "id": "vn_gen_20", "dap_an_dung": "trâu", "lua_chon": ["trâu", "châu"]},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Điền l hay n: ...á cờ", "dap_an_dung": "l", "lua_chon": ["l", "n"], "giai_thich": "Viết đúng là lá cờ.", "id": "vn_gen_21"},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Điền s hay x: Quả ...oài", "dap_an_dung": "x", "lua_chon": ["s", "x"], "giai_thich": "Viết đúng là quả xoài.", "id": "vn_gen_22"},
+        {"dang_bai": "cau_tu", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp thành câu đúng:", "giai_thich": "Câu hoàn chỉnh: Ba rất đẹp.", "id": "vn_gen_23", "dap_an_dung": ["Ba", "rất", "đẹp"], "lua_chon": ["rất", "Ba", "đẹp"]},
+        {"dang_bai": "cau_tu", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Đâu là tên một loại quả?", "giai_thich": "Đó là một loại trái cây thơm ngon.", "id": "vn_gen_24", "dap_an_dung": "Quả dâu tây", "lua_chon": ["Quả dâu tây", "Cái ghế", "Con lợn"]},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Chọn từ đúng chính tả: Con ...", "giai_thich": "Viết đúng là con trâu.", "id": "vn_gen_25", "dap_an_dung": "trâu", "lua_chon": ["trâu", "châu"]},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Điền l hay n: ...á cờ", "dap_an_dung": "l", "lua_chon": ["l", "n"], "giai_thich": "Viết đúng là lá cờ.", "id": "vn_gen_26"},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Điền s hay x: Quả ...oài", "dap_an_dung": "x", "lua_chon": ["s", "x"], "giai_thich": "Viết đúng là quả xoài.", "id": "vn_gen_27"},
+        {"dang_bai": "cau_tu", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp thành câu đúng:", "giai_thich": "Câu hoàn chỉnh: Mẹ rất ngoan.", "id": "vn_gen_28", "dap_an_dung": ["Mẹ", "rất", "ngoan"], "lua_chon": ["rất", "Mẹ", "ngoan"]},
+        {"dang_bai": "cau_tu", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Đâu là tên một loại quả?", "giai_thich": "Đó là một loại trái cây thơm ngon.", "id": "vn_gen_29", "dap_an_dung": "Quả dâu tây", "lua_chon": ["Cái ghế", "Quả dâu tây", "Con lợn"]},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Chọn từ đúng chính tả: Con ...", "giai_thich": "Viết đúng là con trâu.", "id": "vn_gen_30", "dap_an_dung": "trâu", "lua_chon": ["trâu", "châu"]},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Điền l hay n: ...á cờ", "dap_an_dung": "l", "lua_chon": ["l", "n"], "giai_thich": "Viết đúng là lá cờ.", "id": "vn_gen_31"},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Điền s hay x: Quả ...oài", "dap_an_dung": "x", "lua_chon": ["s", "x"], "giai_thich": "Viết đúng là quả xoài.", "id": "vn_gen_32"},
+        {"dang_bai": "cau_tu", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp thành câu đúng:", "giai_thich": "Câu hoàn chỉnh: Kem rất giỏi.", "id": "vn_gen_33", "dap_an_dung": ["Kem", "rất", "giỏi"], "lua_chon": ["Kem", "rất", "giỏi"]},
+        {"dang_bai": "cau_tu", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Đâu là tên một loại quả?", "giai_thich": "Đó là một loại trái cây thơm ngon.", "id": "vn_gen_34", "dap_an_dung": "Quả dâu tây", "lua_chon": ["Cái ghế", "Quả dâu tây", "Con lợn"]},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Chọn từ đúng chính tả: Con ...", "giai_thich": "Viết đúng là con trâu.", "id": "vn_gen_35", "dap_an_dung": "trâu", "lua_chon": ["trâu", "châu"]},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Điền l hay n: ...á cờ", "dap_an_dung": "l", "lua_chon": ["l", "n"], "giai_thich": "Viết đúng là lá cờ.", "id": "vn_gen_36"},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Điền s hay x: Quả ...oài", "dap_an_dung": "x", "lua_chon": ["s", "x"], "giai_thich": "Viết đúng là quả xoài.", "id": "vn_gen_37"},
+        {"dang_bai": "cau_tu", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp thành câu đúng:", "giai_thich": "Câu hoàn chỉnh: Ba rất đẹp.", "id": "vn_gen_38", "dap_an_dung": ["Ba", "rất", "đẹp"], "lua_chon": ["Ba", "đẹp", "rất"]},
+        {"dang_bai": "cau_tu", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Đâu là tên một loại quả?", "giai_thich": "Đó là một loại trái cây thơm ngon.", "id": "vn_gen_39", "dap_an_dung": "Quả dâu tây", "lua_chon": ["Cái ghế", "Quả dâu tây", "Con lợn"]},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Chọn từ đúng chính tả: Con ...", "giai_thich": "Viết đúng là con trâu.", "id": "vn_gen_40", "dap_an_dung": "trâu", "lua_chon": ["trâu", "châu"]},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Điền l hay n: ...á cờ", "dap_an_dung": "l", "lua_chon": ["l", "n"], "giai_thich": "Viết đúng là lá cờ.", "id": "vn_gen_41"},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Điền s hay x: Quả ...oài", "dap_an_dung": "x", "lua_chon": ["s", "x"], "giai_thich": "Viết đúng là quả xoài.", "id": "vn_gen_42"},
+        {"dang_bai": "cau_tu", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp thành câu đúng:", "giai_thich": "Câu hoàn chỉnh: Mẹ rất ngoan.", "id": "vn_gen_43", "dap_an_dung": ["Mẹ", "rất", "ngoan"], "lua_chon": ["rất", "ngoan", "Mẹ"]},
+        {"dang_bai": "cau_tu", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Đâu là tên một loại quả?", "giai_thich": "Đó là một loại trái cây thơm ngon.", "id": "vn_gen_44", "dap_an_dung": "Quả dâu tây", "lua_chon": ["Quả dâu tây", "Cái ghế", "Con lợn"]},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Chọn từ đúng chính tả: Con ...", "giai_thich": "Viết đúng là con trâu.", "id": "vn_gen_45", "dap_an_dung": "trâu", "lua_chon": ["trâu", "châu"]},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Điền l hay n: ...á cờ", "dap_an_dung": "l", "lua_chon": ["l", "n"], "giai_thich": "Viết đúng là lá cờ.", "id": "vn_gen_46"},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Điền s hay x: Quả ...oài", "dap_an_dung": "x", "lua_chon": ["s", "x"], "giai_thich": "Viết đúng là quả xoài.", "id": "vn_gen_47"},
+        {"dang_bai": "cau_tu", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp thành câu đúng:", "giai_thich": "Câu hoàn chỉnh: Kem rất giỏi.", "id": "vn_gen_48", "dap_an_dung": ["Kem", "rất", "giỏi"], "lua_chon": ["rất", "Kem", "giỏi"]},
+        {"dang_bai": "cau_tu", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Đâu là tên một loại quả?", "giai_thich": "Đó là một loại trái cây thơm ngon.", "id": "vn_gen_49", "dap_an_dung": "Quả dâu tây", "lua_chon": ["Quả dâu tây", "Con lợn", "Cái ghế"]},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Chọn từ đúng chính tả: Con ...", "giai_thich": "Viết đúng là con trâu.", "id": "vn_gen_50", "dap_an_dung": "trâu", "lua_chon": ["trâu", "châu"]},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Điền l hay n: ...á cờ", "dap_an_dung": "l", "lua_chon": ["l", "n"], "giai_thich": "Viết đúng là lá cờ.", "id": "vn_gen_51"},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Điền s hay x: Quả ...oài", "dap_an_dung": "x", "lua_chon": ["s", "x"], "giai_thich": "Viết đúng là quả xoài.", "id": "vn_gen_52"},
+        {"dang_bai": "cau_tu", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp thành câu đúng:", "giai_thich": "Câu hoàn chỉnh: Ba rất đẹp.", "id": "vn_gen_53", "dap_an_dung": ["Ba", "rất", "đẹp"], "lua_chon": ["Ba", "đẹp", "rất"]},
+        {"dang_bai": "cau_tu", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Đâu là tên một loại quả?", "giai_thich": "Đó là một loại trái cây thơm ngon.", "id": "vn_gen_54", "dap_an_dung": "Quả dâu tây", "lua_chon": ["Con lợn", "Cái ghế", "Quả dâu tây"]},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Chọn từ đúng chính tả: Con ...", "giai_thich": "Viết đúng là con trâu.", "id": "vn_gen_55", "dap_an_dung": "trâu", "lua_chon": ["trâu", "châu"]},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Điền l hay n: ...á cờ", "dap_an_dung": "l", "lua_chon": ["l", "n"], "giai_thich": "Viết đúng là lá cờ.", "id": "vn_gen_56"},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Điền s hay x: Quả ...oài", "dap_an_dung": "x", "lua_chon": ["s", "x"], "giai_thich": "Viết đúng là quả xoài.", "id": "vn_gen_57"},
+        {"dang_bai": "cau_tu", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp thành câu đúng:", "giai_thich": "Câu hoàn chỉnh: Mẹ rất ngoan.", "id": "vn_gen_58", "dap_an_dung": ["Mẹ", "rất", "ngoan"], "lua_chon": ["ngoan", "Mẹ", "rất"]},
+        {"dang_bai": "cau_tu", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Đâu là tên một loại quả?", "giai_thich": "Đó là một loại trái cây thơm ngon.", "id": "vn_gen_59", "dap_an_dung": "Quả dâu tây", "lua_chon": ["Con lợn", "Cái ghế", "Quả dâu tây"]},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Chọn từ đúng chính tả: Con ...", "giai_thich": "Viết đúng là con trâu.", "id": "vn_gen_60", "dap_an_dung": "trâu", "lua_chon": ["trâu", "châu"]},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Điền l hay n: ...á cờ", "dap_an_dung": "l", "lua_chon": ["l", "n"], "giai_thich": "Viết đúng là lá cờ.", "id": "vn_gen_61"},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Điền s hay x: Quả ...oài", "dap_an_dung": "x", "lua_chon": ["s", "x"], "giai_thich": "Viết đúng là quả xoài.", "id": "vn_gen_62"},
+        {"dang_bai": "cau_tu", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp thành câu đúng:", "giai_thich": "Câu hoàn chỉnh: Kem rất giỏi.", "id": "vn_gen_63", "dap_an_dung": ["Kem", "rất", "giỏi"], "lua_chon": ["giỏi", "rất", "Kem"]},
+        {"dang_bai": "cau_tu", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Đâu là tên một loại quả?", "giai_thich": "Đó là một loại trái cây thơm ngon.", "id": "vn_gen_64", "dap_an_dung": "Quả dâu tây", "lua_chon": ["Quả dâu tây", "Cái ghế", "Con lợn"]},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Chọn từ đúng chính tả: Con ...", "giai_thich": "Viết đúng là con trâu.", "id": "vn_gen_65", "dap_an_dung": "trâu", "lua_chon": ["trâu", "châu"]},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Điền l hay n: ...á cờ", "dap_an_dung": "l", "lua_chon": ["l", "n"], "giai_thich": "Viết đúng là lá cờ.", "id": "vn_gen_66"},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Điền s hay x: Quả ...oài", "dap_an_dung": "x", "lua_chon": ["s", "x"], "giai_thich": "Viết đúng là quả xoài.", "id": "vn_gen_67"},
+        {"dang_bai": "cau_tu", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp thành câu đúng:", "giai_thich": "Câu hoàn chỉnh: Ba rất đẹp.", "id": "vn_gen_68", "dap_an_dung": ["Ba", "rất", "đẹp"], "lua_chon": ["rất", "đẹp", "Ba"]},
+        {"dang_bai": "cau_tu", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Đâu là tên một loại quả?", "giai_thich": "Đó là một loại trái cây thơm ngon.", "id": "vn_gen_69", "dap_an_dung": "Quả dâu tây", "lua_chon": ["Quả dâu tây", "Con lợn", "Cái ghế"]},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Chọn từ đúng chính tả: Con ...", "giai_thich": "Viết đúng là con trâu.", "id": "vn_gen_70", "dap_an_dung": "trâu", "lua_chon": ["trâu", "châu"]},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Điền l hay n: ...á cờ", "dap_an_dung": "l", "lua_chon": ["l", "n"], "giai_thich": "Viết đúng là lá cờ.", "id": "vn_gen_71"},
+        {"dang_bai": "chinh_ta", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Điền s hay x: Quả ...oài", "dap_an_dung": "x", "lua_chon": ["s", "x"], "giai_thich": "Viết đúng là quả xoài.", "id": "vn_gen_72"},
+        {"dang_bai": "cau_tu", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp thành câu đúng:", "giai_thich": "Câu hoàn chỉnh: Mẹ rất ngoan.", "id": "vn_gen_73", "dap_an_dung": ["Mẹ", "rất", "ngoan"], "lua_chon": ["rất", "Mẹ", "ngoan"]}],
 
     englishQuestions: [
         { "id": "en_01", "dang_bai": "colors", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What color is a red apple? (Quả táo màu gì?)", "lua_chon": ["Red", "Green", "Blue"], "dap_an_dung": "Red", "giai_thich": "Red nghĩa là màu đỏ con nhé." },
@@ -107,7 +233,81 @@ const app = {
         { "id": "en_24", "dang_bai": "colors", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "Đêm tối thường hay có màu gì bọc lấy vạn vật?", "lua_chon": ["Black", "White", "Pink"], "dap_an_dung": "Black", "giai_thich": "Black là màu đen, màn đêm tăm tối nhưng rất yên bình." },
         { "id": "en_25", "dang_bai": "animals", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp: 'Đây là con gấu'", "lua_chon": ["a", "is", "This", "bear."], "dap_an_dung": ["This", "is", "a", "bear."], "giai_thich": "Câu hoàn thiện là: This is a bear." },
         { "id": "en_26", "dang_bai": "family", "kieu_tra_loi": "dien_khuyet", "cau_hoi": "Người sinh ra mẹ thì con gọi là bà. Bà (ngoại/nội) tiếng Anh là gì?", "lua_chon": [], "dap_an_dung": "grandmother", "giai_thich": "Bà là Grand-mother, chữ Grand ghếp với chữ Mother là ra!" }
-    ],
+    ,
+        {"dang_bai": "colors", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What color is a strawberry? (Màu của quả dâu tây là gì?)", "giai_thich": "quả dâu tây có màu Red nhé.", "id": "en_gen_0", "dap_an_dung": "Red", "lua_chon": ["Red", "Blue", "Green"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What animal is this: Con vịt?", "giai_thich": "Con vịt tiếng Anh là Duck.", "id": "en_gen_1", "dap_an_dung": "Duck", "lua_chon": ["Duck", "Bird", "Chicken"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp câu: 'Tôi thích Con ngựa'", "giai_thich": "I like Horse.", "id": "en_gen_2", "dap_an_dung": ["I", "like", "Horse"], "lua_chon": ["Horse", "I", "like"]},
+        {"dang_bai": "colors", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What color is the moon? (Màu của mặt trăng là gì?)", "giai_thich": "mặt trăng có màu White nhé.", "id": "en_gen_3", "dap_an_dung": "White", "lua_chon": ["White", "Red", "Black"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What animal is this: Con lợn?", "giai_thich": "Con lợn tiếng Anh là Pig.", "id": "en_gen_4", "dap_an_dung": "Pig", "lua_chon": ["Cat", "Pig", "Dog"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp câu: 'Tôi thích Con vịt'", "giai_thich": "I like Duck.", "id": "en_gen_5", "dap_an_dung": ["I", "like", "Duck"], "lua_chon": ["Duck", "I", "like"]},
+        {"dang_bai": "colors", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What color is a leaf? (Màu của chiếc lá là gì?)", "giai_thich": "chiếc lá có màu Green nhé.", "id": "en_gen_6", "dap_an_dung": "Green", "lua_chon": ["Pink", "Green", "Purple"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What animal is this: Con ếch?", "giai_thich": "Con ếch tiếng Anh là Frog.", "id": "en_gen_7", "dap_an_dung": "Frog", "lua_chon": ["Fish", "Frog", "Mouse"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp câu: 'Tôi thích Con lợn'", "giai_thich": "I like Pig.", "id": "en_gen_8", "dap_an_dung": ["I", "like", "Pig"], "lua_chon": ["Pig", "I", "like"]},
+        {"dang_bai": "colors", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What color is a lemon? (Màu của quả chanh là gì?)", "giai_thich": "quả chanh có màu Yellow nhé.", "id": "en_gen_9", "dap_an_dung": "Yellow", "lua_chon": ["Yellow", "Black", "White"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What animal is this: Con ngựa?", "giai_thich": "Con ngựa tiếng Anh là Horse.", "id": "en_gen_10", "dap_an_dung": "Horse", "lua_chon": ["Sheep", "Horse", "Cow"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp câu: 'Tôi thích Con ếch'", "giai_thich": "I like Frog.", "id": "en_gen_11", "dap_an_dung": ["I", "like", "Frog"], "lua_chon": ["like", "Frog", "I"]},
+        {"dang_bai": "colors", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What color is a strawberry? (Màu của quả dâu tây là gì?)", "giai_thich": "quả dâu tây có màu Red nhé.", "id": "en_gen_12", "dap_an_dung": "Red", "lua_chon": ["Red", "Blue", "Green"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What animal is this: Con vịt?", "giai_thich": "Con vịt tiếng Anh là Duck.", "id": "en_gen_13", "dap_an_dung": "Duck", "lua_chon": ["Duck", "Bird", "Chicken"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp câu: 'Tôi thích Con ngựa'", "giai_thich": "I like Horse.", "id": "en_gen_14", "dap_an_dung": ["I", "like", "Horse"], "lua_chon": ["I", "like", "Horse"]},
+        {"dang_bai": "colors", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What color is the moon? (Màu của mặt trăng là gì?)", "giai_thich": "mặt trăng có màu White nhé.", "id": "en_gen_15", "dap_an_dung": "White", "lua_chon": ["Black", "Red", "White"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What animal is this: Con lợn?", "giai_thich": "Con lợn tiếng Anh là Pig.", "id": "en_gen_16", "dap_an_dung": "Pig", "lua_chon": ["Dog", "Cat", "Pig"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp câu: 'Tôi thích Con vịt'", "giai_thich": "I like Duck.", "id": "en_gen_17", "dap_an_dung": ["I", "like", "Duck"], "lua_chon": ["I", "Duck", "like"]},
+        {"dang_bai": "colors", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What color is a leaf? (Màu của chiếc lá là gì?)", "giai_thich": "chiếc lá có màu Green nhé.", "id": "en_gen_18", "dap_an_dung": "Green", "lua_chon": ["Pink", "Purple", "Green"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What animal is this: Con ếch?", "giai_thich": "Con ếch tiếng Anh là Frog.", "id": "en_gen_19", "dap_an_dung": "Frog", "lua_chon": ["Fish", "Frog", "Mouse"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp câu: 'Tôi thích Con lợn'", "giai_thich": "I like Pig.", "id": "en_gen_20", "dap_an_dung": ["I", "like", "Pig"], "lua_chon": ["like", "I", "Pig"]},
+        {"dang_bai": "colors", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What color is a lemon? (Màu của quả chanh là gì?)", "giai_thich": "quả chanh có màu Yellow nhé.", "id": "en_gen_21", "dap_an_dung": "Yellow", "lua_chon": ["Yellow", "White", "Black"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What animal is this: Con ngựa?", "giai_thich": "Con ngựa tiếng Anh là Horse.", "id": "en_gen_22", "dap_an_dung": "Horse", "lua_chon": ["Sheep", "Horse", "Cow"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp câu: 'Tôi thích Con ếch'", "giai_thich": "I like Frog.", "id": "en_gen_23", "dap_an_dung": ["I", "like", "Frog"], "lua_chon": ["like", "I", "Frog"]},
+        {"dang_bai": "colors", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What color is a strawberry? (Màu của quả dâu tây là gì?)", "giai_thich": "quả dâu tây có màu Red nhé.", "id": "en_gen_24", "dap_an_dung": "Red", "lua_chon": ["Green", "Blue", "Red"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What animal is this: Con vịt?", "giai_thich": "Con vịt tiếng Anh là Duck.", "id": "en_gen_25", "dap_an_dung": "Duck", "lua_chon": ["Bird", "Duck", "Chicken"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp câu: 'Tôi thích Con ngựa'", "giai_thich": "I like Horse.", "id": "en_gen_26", "dap_an_dung": ["I", "like", "Horse"], "lua_chon": ["Horse", "I", "like"]},
+        {"dang_bai": "colors", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What color is the moon? (Màu của mặt trăng là gì?)", "giai_thich": "mặt trăng có màu White nhé.", "id": "en_gen_27", "dap_an_dung": "White", "lua_chon": ["White", "Black", "Red"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What animal is this: Con lợn?", "giai_thich": "Con lợn tiếng Anh là Pig.", "id": "en_gen_28", "dap_an_dung": "Pig", "lua_chon": ["Dog", "Cat", "Pig"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp câu: 'Tôi thích Con vịt'", "giai_thich": "I like Duck.", "id": "en_gen_29", "dap_an_dung": ["I", "like", "Duck"], "lua_chon": ["like", "I", "Duck"]},
+        {"dang_bai": "colors", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What color is a leaf? (Màu của chiếc lá là gì?)", "giai_thich": "chiếc lá có màu Green nhé.", "id": "en_gen_30", "dap_an_dung": "Green", "lua_chon": ["Green", "Pink", "Purple"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What animal is this: Con ếch?", "giai_thich": "Con ếch tiếng Anh là Frog.", "id": "en_gen_31", "dap_an_dung": "Frog", "lua_chon": ["Frog", "Mouse", "Fish"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp câu: 'Tôi thích Con lợn'", "giai_thich": "I like Pig.", "id": "en_gen_32", "dap_an_dung": ["I", "like", "Pig"], "lua_chon": ["like", "I", "Pig"]},
+        {"dang_bai": "colors", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What color is a lemon? (Màu của quả chanh là gì?)", "giai_thich": "quả chanh có màu Yellow nhé.", "id": "en_gen_33", "dap_an_dung": "Yellow", "lua_chon": ["Yellow", "Black", "White"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What animal is this: Con ngựa?", "giai_thich": "Con ngựa tiếng Anh là Horse.", "id": "en_gen_34", "dap_an_dung": "Horse", "lua_chon": ["Cow", "Sheep", "Horse"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp câu: 'Tôi thích Con ếch'", "giai_thich": "I like Frog.", "id": "en_gen_35", "dap_an_dung": ["I", "like", "Frog"], "lua_chon": ["Frog", "I", "like"]},
+        {"dang_bai": "colors", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What color is a strawberry? (Màu của quả dâu tây là gì?)", "giai_thich": "quả dâu tây có màu Red nhé.", "id": "en_gen_36", "dap_an_dung": "Red", "lua_chon": ["Green", "Red", "Blue"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What animal is this: Con vịt?", "giai_thich": "Con vịt tiếng Anh là Duck.", "id": "en_gen_37", "dap_an_dung": "Duck", "lua_chon": ["Bird", "Chicken", "Duck"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp câu: 'Tôi thích Con ngựa'", "giai_thich": "I like Horse.", "id": "en_gen_38", "dap_an_dung": ["I", "like", "Horse"], "lua_chon": ["Horse", "I", "like"]},
+        {"dang_bai": "colors", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What color is the moon? (Màu của mặt trăng là gì?)", "giai_thich": "mặt trăng có màu White nhé.", "id": "en_gen_39", "dap_an_dung": "White", "lua_chon": ["Black", "Red", "White"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What animal is this: Con lợn?", "giai_thich": "Con lợn tiếng Anh là Pig.", "id": "en_gen_40", "dap_an_dung": "Pig", "lua_chon": ["Cat", "Dog", "Pig"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp câu: 'Tôi thích Con vịt'", "giai_thich": "I like Duck.", "id": "en_gen_41", "dap_an_dung": ["I", "like", "Duck"], "lua_chon": ["Duck", "like", "I"]},
+        {"dang_bai": "colors", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What color is a leaf? (Màu của chiếc lá là gì?)", "giai_thich": "chiếc lá có màu Green nhé.", "id": "en_gen_42", "dap_an_dung": "Green", "lua_chon": ["Pink", "Green", "Purple"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What animal is this: Con ếch?", "giai_thich": "Con ếch tiếng Anh là Frog.", "id": "en_gen_43", "dap_an_dung": "Frog", "lua_chon": ["Frog", "Mouse", "Fish"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp câu: 'Tôi thích Con lợn'", "giai_thich": "I like Pig.", "id": "en_gen_44", "dap_an_dung": ["I", "like", "Pig"], "lua_chon": ["I", "like", "Pig"]},
+        {"dang_bai": "colors", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What color is a lemon? (Màu của quả chanh là gì?)", "giai_thich": "quả chanh có màu Yellow nhé.", "id": "en_gen_45", "dap_an_dung": "Yellow", "lua_chon": ["Black", "Yellow", "White"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What animal is this: Con ngựa?", "giai_thich": "Con ngựa tiếng Anh là Horse.", "id": "en_gen_46", "dap_an_dung": "Horse", "lua_chon": ["Horse", "Cow", "Sheep"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp câu: 'Tôi thích Con ếch'", "giai_thich": "I like Frog.", "id": "en_gen_47", "dap_an_dung": ["I", "like", "Frog"], "lua_chon": ["I", "Frog", "like"]},
+        {"dang_bai": "colors", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What color is a strawberry? (Màu của quả dâu tây là gì?)", "giai_thich": "quả dâu tây có màu Red nhé.", "id": "en_gen_48", "dap_an_dung": "Red", "lua_chon": ["Green", "Blue", "Red"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What animal is this: Con vịt?", "giai_thich": "Con vịt tiếng Anh là Duck.", "id": "en_gen_49", "dap_an_dung": "Duck", "lua_chon": ["Bird", "Chicken", "Duck"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp câu: 'Tôi thích Con ngựa'", "giai_thich": "I like Horse.", "id": "en_gen_50", "dap_an_dung": ["I", "like", "Horse"], "lua_chon": ["I", "like", "Horse"]},
+        {"dang_bai": "colors", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What color is the moon? (Màu của mặt trăng là gì?)", "giai_thich": "mặt trăng có màu White nhé.", "id": "en_gen_51", "dap_an_dung": "White", "lua_chon": ["Black", "Red", "White"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What animal is this: Con lợn?", "giai_thich": "Con lợn tiếng Anh là Pig.", "id": "en_gen_52", "dap_an_dung": "Pig", "lua_chon": ["Pig", "Dog", "Cat"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp câu: 'Tôi thích Con vịt'", "giai_thich": "I like Duck.", "id": "en_gen_53", "dap_an_dung": ["I", "like", "Duck"], "lua_chon": ["I", "like", "Duck"]},
+        {"dang_bai": "colors", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What color is a leaf? (Màu của chiếc lá là gì?)", "giai_thich": "chiếc lá có màu Green nhé.", "id": "en_gen_54", "dap_an_dung": "Green", "lua_chon": ["Purple", "Pink", "Green"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What animal is this: Con ếch?", "giai_thich": "Con ếch tiếng Anh là Frog.", "id": "en_gen_55", "dap_an_dung": "Frog", "lua_chon": ["Frog", "Mouse", "Fish"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp câu: 'Tôi thích Con lợn'", "giai_thich": "I like Pig.", "id": "en_gen_56", "dap_an_dung": ["I", "like", "Pig"], "lua_chon": ["I", "Pig", "like"]},
+        {"dang_bai": "colors", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What color is a lemon? (Màu của quả chanh là gì?)", "giai_thich": "quả chanh có màu Yellow nhé.", "id": "en_gen_57", "dap_an_dung": "Yellow", "lua_chon": ["Yellow", "Black", "White"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What animal is this: Con ngựa?", "giai_thich": "Con ngựa tiếng Anh là Horse.", "id": "en_gen_58", "dap_an_dung": "Horse", "lua_chon": ["Horse", "Sheep", "Cow"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp câu: 'Tôi thích Con ếch'", "giai_thich": "I like Frog.", "id": "en_gen_59", "dap_an_dung": ["I", "like", "Frog"], "lua_chon": ["Frog", "like", "I"]},
+        {"dang_bai": "colors", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What color is a strawberry? (Màu của quả dâu tây là gì?)", "giai_thich": "quả dâu tây có màu Red nhé.", "id": "en_gen_60", "dap_an_dung": "Red", "lua_chon": ["Green", "Blue", "Red"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What animal is this: Con vịt?", "giai_thich": "Con vịt tiếng Anh là Duck.", "id": "en_gen_61", "dap_an_dung": "Duck", "lua_chon": ["Chicken", "Duck", "Bird"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp câu: 'Tôi thích Con ngựa'", "giai_thich": "I like Horse.", "id": "en_gen_62", "dap_an_dung": ["I", "like", "Horse"], "lua_chon": ["I", "Horse", "like"]},
+        {"dang_bai": "colors", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What color is the moon? (Màu của mặt trăng là gì?)", "giai_thich": "mặt trăng có màu White nhé.", "id": "en_gen_63", "dap_an_dung": "White", "lua_chon": ["Red", "White", "Black"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What animal is this: Con lợn?", "giai_thich": "Con lợn tiếng Anh là Pig.", "id": "en_gen_64", "dap_an_dung": "Pig", "lua_chon": ["Dog", "Cat", "Pig"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp câu: 'Tôi thích Con vịt'", "giai_thich": "I like Duck.", "id": "en_gen_65", "dap_an_dung": ["I", "like", "Duck"], "lua_chon": ["I", "Duck", "like"]},
+        {"dang_bai": "colors", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What color is a leaf? (Màu của chiếc lá là gì?)", "giai_thich": "chiếc lá có màu Green nhé.", "id": "en_gen_66", "dap_an_dung": "Green", "lua_chon": ["Pink", "Green", "Purple"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What animal is this: Con ếch?", "giai_thich": "Con ếch tiếng Anh là Frog.", "id": "en_gen_67", "dap_an_dung": "Frog", "lua_chon": ["Frog", "Fish", "Mouse"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp câu: 'Tôi thích Con lợn'", "giai_thich": "I like Pig.", "id": "en_gen_68", "dap_an_dung": ["I", "like", "Pig"], "lua_chon": ["Pig", "I", "like"]},
+        {"dang_bai": "colors", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What color is a lemon? (Màu của quả chanh là gì?)", "giai_thich": "quả chanh có màu Yellow nhé.", "id": "en_gen_69", "dap_an_dung": "Yellow", "lua_chon": ["Yellow", "Black", "White"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What animal is this: Con ngựa?", "giai_thich": "Con ngựa tiếng Anh là Horse.", "id": "en_gen_70", "dap_an_dung": "Horse", "lua_chon": ["Cow", "Horse", "Sheep"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "sap_xep", "cau_hoi": "Sắp xếp câu: 'Tôi thích Con ếch'", "giai_thich": "I like Frog.", "id": "en_gen_71", "dap_an_dung": ["I", "like", "Frog"], "lua_chon": ["Frog", "I", "like"]},
+        {"dang_bai": "colors", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What color is a strawberry? (Màu của quả dâu tây là gì?)", "giai_thich": "quả dâu tây có màu Red nhé.", "id": "en_gen_72", "dap_an_dung": "Red", "lua_chon": ["Blue", "Green", "Red"]},
+        {"dang_bai": "animals", "kieu_tra_loi": "trac_nghiem", "cau_hoi": "What animal is this: Con vịt?", "giai_thich": "Con vịt tiếng Anh là Duck.", "id": "en_gen_73", "dap_an_dung": "Duck", "lua_chon": ["Chicken", "Bird", "Duck"]}],
 
     state: {
         screen: 'home',
@@ -127,7 +327,15 @@ const app = {
             { id: 'dog', name: 'Cún', food: 'xương', icon: 'bone_food.png' },
             { id: 'bear', name: 'Gấu', food: 'mật ong', icon: 'honey_food.png' },
             { id: 'horse', name: 'Ngựa', food: 'cỏ', icon: 'grass_food.png' }
-        ]
+        ],
+        // Levels tracking
+        mathLevelsCompleted: JSON.parse(localStorage.getItem('kem_math_levels_completed')) || [],
+        vietnameseLevelsCompleted: JSON.parse(localStorage.getItem('kem_vn_levels_completed')) || [],
+        englishLevelsCompleted: JSON.parse(localStorage.getItem('kem_en_levels_completed')) || [],
+        currentLevelSubject: null,
+        currentLevelIndex: null,
+        currentLevelQuestions: [],
+        currentLevelQuestionIndex: 0
     },
 
     sounds: {
@@ -201,10 +409,16 @@ const app = {
     },
 
     getRandomQuestion(pool) {
+        // If we are in level mode, just return the next question from the chunk
+        if (this.state.currentLevelQuestions && this.state.currentLevelQuestions.length > 0) {
+            const qData = this.state.currentLevelQuestions[this.state.currentLevelQuestionIndex];
+            return qData;
+        }
+
+        // Fallback for old mode
         if (!this.state.usedQuestions) this.state.usedQuestions = [];
         let available = pool.filter(q => !this.state.usedQuestions.includes(q.id));
         if (available.length === 0) {
-            // Hết câu hỏi mới -> xóa lịch sử của các câu trong pool hiện tại để vòng lại lặp mới
             const poolIds = pool.map(q => q.id);
             this.state.usedQuestions = this.state.usedQuestions.filter(id => !poolIds.includes(id));
             available = pool;
@@ -436,9 +650,53 @@ const app = {
     },
 
     nextQuestion() {
-        if (document.getElementById('math-screen').classList.contains('active')) this.generateMathQuestion(this.state.currentFilter);
-        else if (document.getElementById('vietnamese-screen').classList.contains('active')) this.generateVietnameseQuestion(this.state.currentFilter);
-        else if (document.getElementById('english-screen').classList.contains('active')) this.generateEnglishQuestion(this.state.currentFilter);
+        if (this.state.currentLevelQuestions && this.state.currentLevelQuestions.length > 0) {
+            this.state.currentLevelQuestionIndex++;
+            if (this.state.currentLevelQuestionIndex >= this.state.currentLevelQuestions.length) {
+                // Hoàn thành level!
+                this.completeCurrentLevel();
+            } else {
+                // Hiện câu tiếp theo
+                if (this.state.currentLevelSubject === 'math') this.generateMathQuestion();
+                else if (this.state.currentLevelSubject === 'vietnamese') this.generateVietnameseQuestion();
+                else if (this.state.currentLevelSubject === 'english') this.generateEnglishQuestion();
+            }
+        }
+    },
+
+    completeCurrentLevel() {
+        this.playSound('award');
+        confetti({
+            particleCount: 200,
+            spread: 100,
+            origin: { y: 0.5 },
+            colors: ['#ffd43b', '#ff6b9d', '#40c057']
+        });
+        
+        const subj = this.state.currentLevelSubject;
+        const levelIdx = this.state.currentLevelIndex;
+        
+        let completedArr = [];
+        let storageKey = '';
+        if (subj === 'math') { completedArr = this.state.mathLevelsCompleted; storageKey = 'kem_math_levels_completed'; }
+        if (subj === 'vietnamese') { completedArr = this.state.vietnameseLevelsCompleted; storageKey = 'kem_vn_levels_completed'; }
+        if (subj === 'english') { completedArr = this.state.englishLevelsCompleted; storageKey = 'kem_en_levels_completed'; }
+        
+        if (!completedArr.includes(levelIdx)) {
+            completedArr.push(levelIdx);
+            localStorage.setItem(storageKey, JSON.stringify(completedArr));
+        }
+        
+        // Show completion popup
+        const inputArea = document.querySelector('.screen.active .input-area');
+        inputArea.innerHTML = `
+            <div style="text-align: center; margin: 20px 0;">
+                <h3 style="color: #f06595; margin-bottom: 15px;">Chúc mừng Kem đã hoàn thành Level ${levelIdx}! 🌟</h3>
+                <button class="btn-submit" onclick="app.loadModule('${subj}')">Quay lại Menu</button>
+            </div>
+        `;
+        document.querySelector('.screen.active .question-box').innerHTML = 'Tuyệt vời!';
+        document.querySelector('.screen.active .feedback-msg').innerText = '';
     },
 
     handleSuccess() {
@@ -543,9 +801,71 @@ const app = {
         }
     },
 
+    // --- LEVELS RENDER ---
+    renderLevelsGrid(subject, containerId, totalLevels) {
+        const container = document.getElementById(containerId);
+        container.innerHTML = '';
+        
+        let completedArr = [];
+        let icon = '';
+        if (subject === 'math') { completedArr = this.state.mathLevelsCompleted; icon = '📐'; }
+        if (subject === 'vietnamese') { completedArr = this.state.vietnameseLevelsCompleted; icon = '🇻🇳'; }
+        if (subject === 'english') { completedArr = this.state.englishLevelsCompleted; icon = '🔠'; }
+
+        for (let i = 1; i <= totalLevels; i++) {
+            const isCompleted = completedArr.includes(i);
+            const btn = document.createElement('button');
+            btn.className = `level-card ${isCompleted ? 'completed' : ''}`;
+            btn.onclick = () => this.startLevel(subject, i);
+            
+            btn.innerHTML = `
+                <div class="level-icon">${isCompleted ? '⭐' : icon}</div>
+                <div class="level-text">Level ${i}</div>
+                ${isCompleted ? '<div class="level-badge">✅ Hoàn thành</div>' : ''}
+            `;
+            container.appendChild(btn);
+        }
+    },
+
+    startLevel(subject, levelIndex) {
+        this.playSound('click');
+        this.state.currentLevelSubject = subject;
+        this.state.currentLevelIndex = levelIndex;
+        this.state.currentLevelQuestionIndex = 0;
+        
+        let pool = [];
+        if (subject === 'math') pool = this.mathQuestions;
+        if (subject === 'vietnamese') pool = this.vietnameseQuestions;
+        if (subject === 'english') pool = this.englishQuestions;
+        
+        // Mỗi level lấy 10 câu theo thứ tự
+        const startIndex = (levelIndex - 1) * 10;
+        this.state.currentLevelQuestions = pool.slice(startIndex, startIndex + 10);
+        
+        // Cảnh báo nếu chưa đủ câu hỏi
+        if (this.state.currentLevelQuestions.length === 0) {
+            alert('Level này đang được xây dựng, Kem quay lại sau nhé!');
+            return;
+        }
+
+        const screenId = `${subject}-screen`;
+        let title = '';
+        if (subject === 'math') title = `Toán học - Level ${levelIndex}`;
+        if (subject === 'vietnamese') title = `Tiếng Việt - Level ${levelIndex}`;
+        if (subject === 'english') title = `Tiếng Anh - Level ${levelIndex}`;
+
+        this.switchScreen(screenId);
+        this.renderGameFrame(screenId, title, `app.loadModule('${subject}')`);
+        
+        if (subject === 'math') this.generateMathQuestion();
+        else if (subject === 'vietnamese') this.generateVietnameseQuestion();
+        else if (subject === 'english') this.generateEnglishQuestion();
+    },
+
     // --- MODULE TOÁN ---
     initMathGame() {
         this.switchScreen('math-menu-screen');
+        this.renderLevelsGrid('math', 'math-level-grid', 10);
     },
 
     startMathGame(filter) {
@@ -555,19 +875,21 @@ const app = {
         this.generateMathQuestion(filter);
     },
 
-    generateMathQuestion(filter = 'all') {
-        let pool = this.mathQuestions;
-        if (filter !== 'all') {
-            pool = this.mathQuestions.filter(q => q.dang_bai === filter || q.kieu_tra_loi === filter);
-        }
-        const qData = this.getRandomQuestion(pool);
+    generateMathQuestion() {
+        const qData = this.getRandomQuestion(this.mathQuestions);
         this.state.currentQuestion = qData;
+        
+        // Update header to show progress
+        const header = document.querySelector('#math-screen h2');
+        header.innerText = `Toán học - Level ${this.state.currentLevelIndex} (${this.state.currentLevelQuestionIndex + 1}/10)`;
+
         this.displayQuestion('math-screen', qData);
     },
 
     // --- MODULE TIẾNG VIỆT ---
     initVietnameseGame() {
         this.switchScreen('vietnamese-menu-screen');
+        this.renderLevelsGrid('vietnamese', 'vietnamese-level-grid', 10);
     },
 
     startVietnameseGame(filter) {
@@ -577,19 +899,20 @@ const app = {
         this.generateVietnameseQuestion(filter);
     },
 
-    generateVietnameseQuestion(filter = 'all') {
-        let pool = this.vietnameseQuestions;
-        if (filter !== 'all') {
-            pool = this.vietnameseQuestions.filter(q => q.dang_bai === filter);
-        }
-        const qData = this.getRandomQuestion(pool);
+    generateVietnameseQuestion() {
+        const qData = this.getRandomQuestion(this.vietnameseQuestions);
         this.state.currentQuestion = qData;
+        
+        const header = document.querySelector('#vietnamese-screen h2');
+        header.innerText = `Tiếng Việt - Level ${this.state.currentLevelIndex} (${this.state.currentLevelQuestionIndex + 1}/10)`;
+
         this.displayQuestion('vietnamese-screen', qData);
     },
 
     // --- MODULE TIẾNG ANH ---
     initEnglishGame() {
         this.switchScreen('english-menu-screen');
+        this.renderLevelsGrid('english', 'english-level-grid', 10);
     },
 
     startEnglishGame(filter) {
@@ -599,13 +922,13 @@ const app = {
         this.generateEnglishQuestion(filter);
     },
 
-    generateEnglishQuestion(filter = 'all') {
-        let pool = this.englishQuestions;
-        if (filter !== 'all') {
-            pool = this.englishQuestions.filter(q => q.dang_bai === filter);
-        }
-        const qData = this.getRandomQuestion(pool);
+    generateEnglishQuestion() {
+        const qData = this.getRandomQuestion(this.englishQuestions);
         this.state.currentQuestion = qData;
+        
+        const header = document.querySelector('#english-screen h2');
+        header.innerText = `Tiếng Anh - Level ${this.state.currentLevelIndex} (${this.state.currentLevelQuestionIndex + 1}/10)`;
+
         this.displayQuestion('english-screen', qData);
     },
 
