@@ -1,9 +1,10 @@
-const CACHE_NAME = 'kem-app-v5';
+const CACHE_NAME = 'kem-app-v6';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
   './style.css',
   './app.js',
+  './exam_data.js',
   './manifest.json',
   'https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap',
   'https://unpkg.com/lucide@latest',
