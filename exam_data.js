@@ -59,7 +59,10 @@ const examData = [
     "exam": "### I. Trắc nghiệm\n**Câu 1.** Số gồm 8 chục và 2 đơn vị là:\nA. 28<br>B. 82<br>C. 80<br>D. 20\n\n**Câu 2.** Số liền sau của 99 là:\nA. 98<br>B. 90<br>C. 100<br>D. 109\n\n**Câu 3.** Kết quả của 72 - 2 là:\nA. 70<br>B. 74<br>C. 52<br>D. 20\n\n**Câu 4.** Phép tính nào có kết quả bằng 66?\nA. 60 + 6<br>B. 66 - 6<br>C. 56 + 6<br>D. 76 - 20\n\n**Câu 5.** Thứ tự đúng của các tháng là:\nA. tháng 1, tháng 2, tháng 3<br>B. tháng 2, tháng 1, tháng 3<br>C. tháng 3, tháng 2, tháng 1<br>D. tháng 1, tháng 3, tháng 2\n\n**Câu 6.** Vật nào thường có dạng hình vuông?\nA. mặt đồng hồ tròn<br>B. viên gạch lát nền<br>C. quả bóng<br>D. cái bút\n\n### II. Tự luận\n**Câu 7.** Điền dấu >, <, =:\na. 45 ... 54<br>b. 90 - 10 ... 80<br>c. 67 + 2 ... 70<br>d. 100 ... 99\n\n**Câu 8.** Tính:\na. 36 + 42 = ............<br>b. 94 - 31 = ............\nc. 63 + 6 = .............<br>d. 85 - 40 = ............\n\n**Câu 9.** Thu có 56 bông hoa, Thu tặng bạn 24 bông. Hỏi Thu còn lại bao nhiêu bông hoa?\nBài giải: ................................................................\n\n**Câu 10.** Quan sát và trả lời:\na. Hình vuông có .... cạnh.  \nb. Hình tam giác có .... cạnh.  \nc. Hình tròn có .... cạnh.  \nd. Hình chữ nhật có .... góc.\n",
     "answer": "### I. Trắc nghiệm\n1. B  \n2. C  \n3. A  \n4. A  \n5. A  \n6. B  \n\n### II. Tự luận\n**Câu 7:**  \na. <  \nb. =  \nc. <  \nd. >  \n\n**Câu 8:**  \na. 78  \nb. 63  \nc. 69  \nd. 45  \n\n**Câu 9:**  \nSố bông hoa Thu còn lại là:  \n56 - 24 = 32 (bông hoa)  \nĐáp số: 32 bông hoa.  \n\n**Câu 10:**  \na. 4  \nb. 3  \nc. 0 (hoặc không có cạnh)  \nd. 4  \n"
   }
-];\n\n// Các Đề Nâng Cao\nconst advancedExamData = [
+];
+
+// Các Đề Nâng Cao
+const advancedExamData = [
   {
     "id": 11,
     "title": "Đề Nâng Cao 1",
@@ -120,4 +123,6 @@ const examData = [
     "exam": "### I. Trắc nghiệm\n**Câu 1.** Số lớn nhất bé hơn 100 là:\nA. 98<br>B. 99<br>C. 100<br>D. 90\n\n**Câu 2.** Số bé nhất lớn hơn 89 là:\nA. 88<br>B. 89<br>C. 90<br>D. 91\n\n**Câu 3.** 64 + 25 - 30 =:\nA. 49<br>B. 59<br>C. 69<br>D. 89\n\n**Câu 4.** 100 - 50 + 18 =:\nA. 58<br>B. 68<br>C. 78<br>D. 88\n\n**Câu 5.** Dãy nào được sắp xếp từ lớn đến bé?\nA. 45, 54, 64<br>B. 80, 70, 60<br>C. 39, 49, 59<br>D. 12, 21, 31\n\n**Câu 6.** Nếu một hình tam giác có 3 cạnh, 3 đỉnh. Hai hình tam giác riêng biệt có tất cả:\nA. 3 cạnh<br>B. 4 cạnh<br>C. 6 cạnh<br>D. 8 cạnh\n\n### II. Tự luận\n**Câu 7.** Viết các số có hai chữ số mà hàng chục là 9, hàng đơn vị bé hơn 5.\n........................................................................\n\n**Câu 8.** Đặt tính rồi tính:\na. 54 + 35 = ............<br>b. 98 - 46 = ............\nc. 67 + 21 = ............<br>d. 89 - 24 = ............\n\n**Câu 9.** Một cửa hàng có 96 quyển vở. Buổi sáng bán 30 quyển, buổi chiều bán 25 quyển. Hỏi cửa hàng còn bao nhiêu quyển vở?\nBài giải: ................................................................\n\n**Câu 10.** Điền dấu >, <, =:\na. 78 - 20 ... 40 + 18<br>b. 25 + 34 ... 90 - 31\nc. 100 - 10 ... 80 + 9<br>d. 66 + 3 ... 70 - 1\n",
     "answer": "### I. Trắc nghiệm\n1. B\n2. C\n3. B\n4. B\n5. B\n6. C\n\n### II. Tự luận\n**Câu 7:**\n90, 91, 92, 93, 94.\n\n**Câu 8:**\na. 89\nb. 52\nc. 88\nd. 65\n\n**Câu 9:**\nSố quyển vở cửa hàng còn lại là:\n96 - 30 - 25 = 41 (quyển vở)\nĐáp số: 41 quyển vở.\n\n**Câu 10:**\na. =\nb. =\nc. >\nd. =\n"
   }
-];\n\nexamData.push(...advancedExamData);\n
+];
+
+examData.push(...advancedExamData);
