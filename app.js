@@ -546,6 +546,69 @@ const app = {
         if (module === 'difference') this.initDifferenceGame();
     },
 
+    loadExamsScreen() {
+        this.switchScreen('exams-screen');
+        const grid = document.getElementById('exam-list-grid');
+        grid.innerHTML = '';
+        
+        if (typeof examData !== 'undefined') {
+            examData.forEach((exam, index) => {
+                const btn = document.createElement('div');
+                btn.className = 'level-card';
+                btn.style.cursor = 'pointer';
+                btn.innerHTML = `
+                    <div class="level-icon">📝</div>
+                    <div class="level-text">${exam.title}</div>
+                `;
+                btn.onclick = () => this.openExamDetail(index);
+                grid.appendChild(btn);
+            });
+        } else {
+            grid.innerHTML = '<p>Không tìm thấy dữ liệu đề thi.</p>';
+        }
+    },
+
+    openExamDetail(index) {
+        this.currentExamIndex = index;
+        this.switchScreen('exam-detail-screen');
+        document.getElementById('exam-detail-title').innerText = examData[index].title;
+        this.showExamContent('exam');
+    },
+
+    showExamContent(type) {
+        const contentArea = document.getElementById('exam-content-area');
+        if (typeof examData === 'undefined' || typeof this.currentExamIndex === 'undefined') {
+            contentArea.innerHTML = 'Lỗi tải dữ liệu!';
+            return;
+        }
+        const exam = examData[this.currentExamIndex];
+        
+        const btnExam = document.getElementById('btn-tab-exam');
+        const btnAnswer = document.getElementById('btn-tab-answer');
+        
+        if (type === 'exam') {
+            if (btnExam) {
+                btnExam.style.backgroundColor = '#ff922b';
+                btnExam.style.color = 'white';
+            }
+            if (btnAnswer) {
+                btnAnswer.style.backgroundColor = '#ced4da';
+                btnAnswer.style.color = '#495057';
+            }
+            contentArea.innerHTML = marked.parse(exam.exam, { breaks: true });
+        } else {
+            if (btnAnswer) {
+                btnAnswer.style.backgroundColor = '#40c057';
+                btnAnswer.style.color = 'white';
+            }
+            if (btnExam) {
+                btnExam.style.backgroundColor = '#ced4da';
+                btnExam.style.color = '#495057';
+            }
+            contentArea.innerHTML = marked.parse(exam.answer, { breaks: true });
+        }
+    },
+
     // --- CƠ CHẾ CHUNG ---
     renderGameFrame(screenId, title, backHandler = 'app.loadHome()') {
         const screen = document.getElementById(screenId);

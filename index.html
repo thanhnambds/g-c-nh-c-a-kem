@@ -15,6 +15,7 @@
     <link rel="apple-touch-icon" href="assets/elsa-icon.png">
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
     <div id="app" class="elsa-theme">
@@ -58,6 +59,11 @@
                             <div class="card-icon">📐</div>
                             <span>Toán</span>
                             <p>Phạm vi 100</p>
+                        </button>
+                        <button class="menu-card exam" onclick="app.loadExamsScreen()">
+                            <div class="card-icon">📝</div>
+                            <span>Bộ Đề</span>
+                            <p>10 Đề Toán Lớp 1</p>
                         </button>
                         <button class="menu-card vietnamese" onclick="app.loadModule('vietnamese')">
                             <div class="card-icon">🇻🇳</div>
@@ -243,6 +249,32 @@
                         <!-- Populated by JS -->
                     </div>
                 </div>
+
+                <!-- Exams Screen (List) -->
+                <div id="exams-screen" class="screen">
+                    <div class="header-with-back">
+                        <button class="btn-back" onclick="app.loadHome()"><i data-lucide="arrow-left"></i> Quay lại</button>
+                        <h2>Danh Sách Đề Toán Lớp 1</h2>
+                    </div>
+                    <div class="level-grid" id="exam-list-grid">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <!-- Exam Detail Screen -->
+                <div id="exam-detail-screen" class="screen">
+                    <div class="header-with-back">
+                        <button class="btn-back" onclick="app.loadExamsScreen()"><i data-lucide="arrow-left"></i> Quay lại</button>
+                        <h2 id="exam-detail-title">Bộ Đề Toán Lớp 1</h2>
+                    </div>
+                    <div class="exam-tabs" style="display: flex; justify-content: center; gap: 10px; margin-top: 10px; margin-bottom: 20px;">
+                        <button class="btn-submit" id="btn-tab-exam" style="background-color: #ff922b;" onclick="app.showExamContent('exam')">Đề thi</button>
+                        <button class="btn-submit" id="btn-tab-answer" style="background-color: #ced4da; color: #495057;" onclick="app.showExamContent('answer')">Đáp án</button>
+                    </div>
+                    <div class="game-container exam-container" style="background: white; text-align: left; padding: 20px; font-size: 1.1em; line-height: 1.6; max-height: 65vh; overflow-y: auto; border-radius: 15px; box-shadow: inset 0 2px 10px rgba(0,0,0,0.05);">
+                        <div id="exam-content-area" class="markdown-body">Đang tải nội dung...</div>
+                    </div>
+                </div>
             </main>
 
             <footer>
@@ -256,6 +288,7 @@
         <img id="feedback-character" src="" alt="Feedback Character">
     </div>
 
+    <script src="exam_data.js"></script>
     <script src="app.js"></script>
     <script>
         if ('serviceWorker' in navigator) {
